@@ -5,7 +5,7 @@ public class AutoBuild {
 	{
 		string[] scenes = {};
 		BuildPipeline.BuildPlayer (scenes, 
-		                           "Builds/aremi.apk", 
+		                           "Builds/monsteel.apk", 
 		                           BuildTarget.Android, 
 		                           BuildOptions.None);
 	}

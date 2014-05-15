@@ -1,1 +1,1 @@
-C:\Python27\python.exe "C:\path\to\AutoBuild\auto_build.py"
+C:\Python27\python.exe "E:\monsteel-prototype-builds\bin\auto_build.py"

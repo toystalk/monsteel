@@ -7,7 +7,8 @@ Copyright (C) TOYS TALK - All Rights Reserved
 Unauthorized copying of this file, via any medium is strictly prohibited
 Proprietary and confidential
 
-Auto build driver for the Aremi Project, can be run in a scheduled job.
+Auto build driver for the Monsteel Prototype Project, can be run from a 
+scheduled job.
 
 Written by Rafael Batista <rafaelbatista@toystalk.com>, April 2014
 """
@@ -19,12 +20,12 @@ from shutil import copy, rmtree
 
 UNITY_PATH_WINDOWS = "C:\Program Files (x86)\Unity\Editor\Unity.exe"
 
-PROJECT_URL = "git@github.com:toystalk/aremi.git"
-BUILD_ROOT = "E:/aremi_builds/"
+PROJECT_URL = "git@github.com:toystalk/monsteel-prototype.git"
+BUILD_ROOT = "E:/monsteel-prototype-builds/"
 SOURCE_ROOT = os.path.join(BUILD_ROOT, "source")
 LOCAL_BUILD_PATH = os.path.join(SOURCE_ROOT, "Builds")
 
-ANDROID_BINARY_NAME = "aremi.apk"
+ANDROID_BINARY_NAME = "monsteel.apk"
 
 CLI_OPTIONS = (
 	"-batchmode",
