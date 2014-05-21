@@ -82,6 +82,10 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
         }
 
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+
+        if (mTrackableBehaviour.TrackableName == "Toystalk_Dracula") {
+            ToyManager.instance.DraculaFoundCallback();
+        }
     }
 
 
@@ -103,6 +107,11 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
         }
 
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+
+        if (mTrackableBehaviour.TrackableName == "Toystalk_Dracula") {
+            ToyManager.instance.DraculaLostCallback();
+        }
+
     }
 
     #endregion // PRIVATE_METHODS
