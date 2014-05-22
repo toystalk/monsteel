@@ -15,6 +15,7 @@ using System.Collections;
 */
 public class GUICallBackReceiver : MonoBehaviour {
     public void OnClick() {
+        Debug.Log("OnClick callback");
         GUIManager.instance.onClick(transform.name);
     }
 

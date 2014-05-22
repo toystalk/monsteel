@@ -6,4 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Comic2.unity
+  - enabled: 1
+    path: Assets/Scenes/Menu/Splash.unity
+  - enabled: 1
+    path: Assets/Scenes/Menu/Start.unity
+  - enabled: 1
     path: Assets/Scenes/Levels/DraculaAR1.unity
