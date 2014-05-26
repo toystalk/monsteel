@@ -17,7 +17,7 @@ public class GameManager : Singleton<GameManager> {
         Splash,
         Start,
 		PreGame,
-		Game,
+		DraculaAR1,
 		PosGame
     }
 
@@ -128,8 +128,8 @@ public class GameManager : Singleton<GameManager> {
             case GameState.Splash:                
                 GUIManager.instance.updateMainContent(currentState.ToString());
                 break;
-            case GameState.Game:
-                GUIManager.instance.updateMainContent(currentState.ToString());
+            case GameState.DraculaAR1:
+                //GUIManager.instance.updateMainContent(currentState.ToString());
                 break;
             default:
                 break;
