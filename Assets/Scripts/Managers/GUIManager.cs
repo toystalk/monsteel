@@ -121,7 +121,8 @@ public class GUIManager : Singleton<GUIManager> {
             case "contentName":
                 break;
             case "FadeSplash":
-                GameManager.instance.startGame();
+                GameManager.instance.waitToLoad=false;
+                //GameManager.instance.startGame();
                 break;
             case "FadeStart":
                 Destroy(content);

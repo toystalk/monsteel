@@ -5872,15 +5872,10 @@ MonoBehaviour:
   animationCurve:
     serializedVersion: 2
     m_Curve:
-    - time: -.00101626012
+    - time: 0
       value: 0
-      inSlope: -.0316653214
-      outSlope: -.0316653214
-      tangentMode: 0
-    - time: .209777653
-      value: -.00129951537
-      inSlope: -.0411443152
-      outSlope: -.0411443152
+      inSlope: 0
+      outSlope: 1
       tangentMode: 0
     - time: 1
       value: 1
@@ -5948,7 +5943,7 @@ MonoBehaviour:
   aspectRatio: .625
   mAtlas: {fileID: 11400000, guid: 6983c124cbbb7384aabd9085738d3236, type: 2}
   mSpriteName: FadePreto
-  mType: 1
+  mType: 2
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0

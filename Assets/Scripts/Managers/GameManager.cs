@@ -32,10 +32,16 @@ public class GameManager : Singleton<GameManager> {
 
     StateUpdate currentUpdate; // Manages wanted updates to be ran    
 
+    public bool waitToLoad;
+
 // Keep track of state change in the editor, being used to trigger arbitrary changes
 #if UNITY_EDITOR
     public bool stateChanged = false;
 #endif
+
+    void Start () {
+        startGame();
+    }
 
     // Use this for initialization
     void Awake() {
@@ -85,7 +91,8 @@ public class GameManager : Singleton<GameManager> {
     }
 
     // Starts the game updating a current state to begin
-    public void startGame() {
+    public void startGame () {
+        waitToLoad = true;
         //starts the game
         updateState(GameState.Start);
     }
@@ -144,15 +151,22 @@ public class GameManager : Singleton<GameManager> {
         do {
             yield return new WaitForSeconds(1.0f);
         } while (async.isDone);
-        
+
+        do {
+            yield return new WaitForSeconds(1.0f);
+        } while (waitToLoad);
+
         async.allowSceneActivation = true;
+
         do {
             yield return new WaitForSeconds(0.01f);
         } while (Application.loadedLevelName != levelToLoad);
 
         currentScene = Application.loadedLevelName;
+        Debug.Log("LOADING : " + currentScene + " COMPLETE.");
         GUIManager.instance.initContents();
         AudioManager.instance.initSources();
         updateGUI();
     }
+
 }

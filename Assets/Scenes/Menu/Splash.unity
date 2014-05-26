@@ -128,7 +128,7 @@ MonoBehaviour:
   aspectRatio: .625
   mAtlas: {fileID: 11400000, guid: 6983c124cbbb7384aabd9085738d3236, type: 2}
   mSpriteName: FadeBranco
-  mType: 2
+  mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
@@ -147,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 174444858}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.0765028, y: 1.0765028, z: 1.0765028}
   m_Children: []
   m_Father: {fileID: 677584085}
 --- !u!1 &204207331
@@ -176,7 +176,7 @@ Transform:
   m_GameObject: {fileID: 204207331}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .00202634255, y: .00202634255, z: .00202634255}
+  m_LocalScale: {x: .00156250002, y: .00156250002, z: .00156250002}
   m_Children:
   - {fileID: 2083891080}
   - {fileID: 677584085}
@@ -251,7 +251,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scalingStyle: 0
   manualHeight: 720
-  minimumHeight: 480
+  minimumHeight: 1280
   maximumHeight: 1280
   adjustByDPI: 0
   shrinkPortraitUI: 0
@@ -281,7 +281,7 @@ Transform:
   m_GameObject: {fileID: 347418399}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .999944985, y: .999944985, z: .999944985}
+  m_LocalScale: {x: 1.07408309, y: 1.07408309, z: 1.07408309}
   m_Children: []
   m_Father: {fileID: 677584085}
 --- !u!114 &347418401
@@ -322,7 +322,7 @@ MonoBehaviour:
   aspectRatio: .625
   mAtlas: {fileID: 11400000, guid: 6983c124cbbb7384aabd9085738d3236, type: 2}
   mSpriteName: FadePreto
-  mType: 2
+  mType: 1
   mFillDirection: 4
   mFillAmount: 1
   mInvert: 0
@@ -503,6 +503,7 @@ MonoBehaviour:
   currentState: 0
   prevState: 0
   currentScene: 
+  waitToLoad: 0
   stateChanged: 0
 --- !u!4 &853433943
 Transform:
@@ -571,8 +572,8 @@ MonoBehaviour:
     absolute: 0
   mColor: {r: 1, g: 1, b: 1, a: 1}
   mPivot: 4
-  mWidth: 250
-  mHeight: 121
+  mWidth: 655
+  mHeight: 318
   mDepth: 1
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
