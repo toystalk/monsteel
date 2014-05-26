@@ -107,9 +107,7 @@ public class GUIManager : Singleton<GUIManager> {
 			case "buttonName":
 				break;
             case "ButtonStart":
-                GameObject.Find("DoorAnima").GetComponent<Animator>().enabled = true;
-                AudioManager.instance.playEffect("DoorClosing");
-                GameManager.instance.updateStateWait(GameManager.GameState.Game,3.0f);
+                FindObjectOfType<FadeScreen>().FadeScene();
                 break;
             default:
                 break;

@@ -56,7 +56,7 @@ Material:
       data:
         first:
           name: _SmokeScale
-        second: .5
+        second: 1.48000002
       data:
         first:
           name: _node207
