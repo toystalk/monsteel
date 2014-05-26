@@ -14,11 +14,13 @@ using System.Collections;
  * and associated to NGUI's callback.
 */
 public class GUICallBackReceiver : MonoBehaviour {
+
     public void OnClick() {
-        GUIManager.instance.onClick(transform.name);
+        //GUIManager.instance.onClick(transform.name);
     }
 
     public void OnFinished() {
-        GUIManager.instance.onTweenEnd(gameObject);
+		Debug.Log ("OnFinished");
+        //GUIManager.instance.onTweenEnd(gameObject);
     }
 }
