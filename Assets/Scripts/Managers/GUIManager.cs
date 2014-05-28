@@ -106,8 +106,20 @@ public class GUIManager : Singleton<GUIManager> {
         switch (button) {
 			case "buttonName":
 				break;
-            case "ButtonStart":
-                FindObjectOfType<FadeScreen>().FadeScene();
+            case "StartButton":
+                ToyManager.instance.startDraculaComic();
+                break;
+            case "MenuButton":
+                ToyManager.instance.updateState(ToyManager.draculaState.PreRA);
+                break;
+            case "NextButton":
+                ToyManager.instance.updateState(ToyManager.draculaState.Comic2);
+                break;
+            case "BackButton":
+                ToyManager.instance.updateState(ToyManager.draculaState.Comic1);
+                break;
+            case "Dracula":
+                ToyManager.instance.updateState(ToyManager.draculaState.Smoke);
                 break;
             default:
                 break;
