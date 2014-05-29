@@ -19,6 +19,7 @@ public class ToyManager : Singleton<ToyManager> {
     public GameObject comic1;
     public GameObject comic2;
 
+    public GameObject backDraculaPanel;
     public GameObject findDraculaPanel;
     public GameObject coverPanel;
     public GameObject startObj;
@@ -30,11 +31,11 @@ public class ToyManager : Singleton<ToyManager> {
 	// Use this for initialization
 	IEnumerator Start () {
         yield return new WaitForSeconds(0.2f);
-        centerVuforiaCameraRect();
+        //centerVuforiaCameraRect();
         //CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 	}
 	
-	// Update is called once per frame
+	/* Update is called once per frame
 	void Update () {
 
         if (Input.touchCount == 1) {
@@ -49,7 +50,7 @@ public class ToyManager : Singleton<ToyManager> {
         if (Input.GetKeyDown(KeyCode.Return)) {
             updateState(currentState);
         }
-	}
+	}*/
 
     public void DraculaFoundCallback () {
         switch (currentState) {
@@ -96,7 +97,7 @@ public class ToyManager : Singleton<ToyManager> {
             case draculaState.PreRA:
                 resetComic("comic1");
                 resetComic("comic2");
-                centerVuforiaCameraRect();
+                //centerVuforiaCameraRect();
                 startObj.SetActive(false);
                 draculaFill.SetActive(false);
                 showCoverPanel(1);
@@ -107,13 +108,21 @@ public class ToyManager : Singleton<ToyManager> {
                 comic2.SetActive(false);
                 break;
             case draculaState.Comic2:
+                if (currentState == draculaState.Smoke) {
+                    showUpEffect.Stop();
+                    dracula.SetActive(false);
+                    findDraculaPanel.SetActive(false);
+                    backDraculaPanel.SetActive(false);
+                }
                 resetComic("comic1");
                 comic2.SetActive(true);
                 comic1.SetActive(false);
                 break;
             case draculaState.Smoke:
-                resetVuforiaCameraRect();
+                //resetVuforiaCameraRect();
+                resetComic("comic2");
                 findDraculaPanel.SetActive(true);
+                backDraculaPanel.SetActive(true);
                 if (currentState == draculaState.Comic1 || currentState == draculaState.Comic2) {
                     comic2.SetActive(false);
                     comic1.SetActive(false);
@@ -127,12 +136,16 @@ public class ToyManager : Singleton<ToyManager> {
 
     void centerVuforiaCameraRect () {
         Camera temp = FindObjectOfType<SetBGCameraLayerBehaviour>().GetComponent<Camera>();
+        Debug.Log("UNITY - CAMERA VUFORIA  = " + temp);
         temp.rect = new Rect(0.26f, 0.17f, 0.49f, 0.42f);
+        Debug.Log("UNITY - CAMERA VUFORIA  = " + temp.rect);
     }
 
     void resetVuforiaCameraRect () {
         Camera temp = FindObjectOfType<SetBGCameraLayerBehaviour>().GetComponent<Camera>();
+        Debug.Log("UNITY - CAMERA VUFORIA  = " + temp);
         temp.rect = new Rect(0, 0, 1, 1);
+        Debug.Log("UNITY - CAMERA VUFORIA  = " + temp.rect);
     }
 
     public void startDraculaComic () {

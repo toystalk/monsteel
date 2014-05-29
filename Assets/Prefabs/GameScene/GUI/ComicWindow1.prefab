@@ -1501,7 +1501,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   ignoreTimeScale: 1
-  delay: 14
+  delay: 0
   duration: .5
   steeperCurves: 0
   tweenGroup: 0
@@ -1540,7 +1540,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   ignoreTimeScale: 1
-  delay: 14
+  delay: 0
   duration: .200000003
   steeperCurves: 0
   tweenGroup: 0
@@ -1578,7 +1578,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   ignoreTimeScale: 1
-  delay: 14
+  delay: 0
   duration: .5
   steeperCurves: 0
   tweenGroup: 0
@@ -2721,7 +2721,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   ignoreTimeScale: 1
-  delay: 14
+  delay: 0
   duration: .5
   steeperCurves: 0
   tweenGroup: 0

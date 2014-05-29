@@ -116,7 +116,12 @@ public class GUIManager : Singleton<GUIManager> {
                 ToyManager.instance.updateState(ToyManager.draculaState.Comic2);
                 break;
             case "BackButton":
-                ToyManager.instance.updateState(ToyManager.draculaState.Comic1);
+                if (ToyManager.instance.currentState == ToyManager.draculaState.Smoke) {
+                    ToyManager.instance.updateState(ToyManager.draculaState.Comic2);
+                }
+                else {
+                    ToyManager.instance.updateState(ToyManager.draculaState.Comic1);
+                }
                 break;
             case "Dracula":
                 ToyManager.instance.updateState(ToyManager.draculaState.Smoke);
