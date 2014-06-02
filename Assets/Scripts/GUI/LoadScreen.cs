@@ -37,10 +37,16 @@ public class LoadScreen : MonoBehaviour {
 
     public void OpenLoad () {
         loadTween.PlayForward();
+        if (this.name == "LoadTop") {
+            AudioManager.playEffectAfter("Gate", 1.6f);
+        }
     }
 
     public void CloseLoad () {
         loadTween.PlayReverse();
+        if (this.name == "LoadTop") {
+            AudioManager.playEffectAfter("Gatereverse", 0.01f);
+        }
     }
 
     public void moveRoot (Transform father) {

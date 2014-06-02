@@ -45,6 +45,7 @@ GameObject:
   - 114: {fileID: 11400010}
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400204}
   m_Layer: 10
   m_Name: MissPanta
   m_TagString: Untagged
@@ -117,6 +118,7 @@ GameObject:
   - 114: {fileID: 11400034}
   - 114: {fileID: 11400032}
   - 114: {fileID: 11400030}
+  - 114: {fileID: 11400210}
   m_Layer: 10
   m_Name: BlueBacklight
   m_TagString: Untagged
@@ -152,6 +154,7 @@ GameObject:
   - 114: {fileID: 11400044}
   - 114: {fileID: 11400042}
   - 114: {fileID: 11400040}
+  - 114: {fileID: 11400206}
   m_Layer: 10
   m_Name: Dracula
   m_TagString: Untagged
@@ -515,6 +518,7 @@ GameObject:
   - 114: {fileID: 11400134}
   - 114: {fileID: 11400132}
   - 114: {fileID: 11400130}
+  - 114: {fileID: 11400208}
   m_Layer: 10
   m_Name: Zombie
   m_TagString: Untagged
@@ -1645,7 +1649,10 @@ MonoBehaviour:
   duration: .300000012
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 11400204}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: -0, y: 0, z: 0}
@@ -2116,10 +2123,13 @@ MonoBehaviour:
     m_PostInfinity: 2
   ignoreTimeScale: 1
   delay: 0
-  duration: 1
+  duration: 1.20000005
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 11400210}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: 1, y: 1, z: 1}
@@ -2409,7 +2419,10 @@ MonoBehaviour:
   duration: .300000012
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 11400206}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: 0
@@ -4310,7 +4323,10 @@ MonoBehaviour:
   duration: .5
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 11400208}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: 0
@@ -5727,6 +5743,50 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400204
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400208
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400210
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100012}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}

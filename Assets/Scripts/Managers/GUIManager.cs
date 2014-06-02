@@ -107,13 +107,15 @@ public class GUIManager : Singleton<GUIManager> {
 			case "buttonName":
 				break;
             case "StartButton":
-                ToyManager.instance.startDraculaComic();
+                ToyManager.instance.startComic();
                 break;
             case "MenuButton":
                 ToyManager.instance.updateState(ToyManager.draculaState.PreRA);
                 break;
             case "NextButton":
                 ToyManager.instance.updateState(ToyManager.draculaState.Comic2);
+                AudioManager.instance.stopBGM();
+                AudioManager.instance.playEffect("Pageturn");
                 break;
             case "BackButton":
                 if (ToyManager.instance.currentState == ToyManager.draculaState.Smoke) {
@@ -122,6 +124,7 @@ public class GUIManager : Singleton<GUIManager> {
                 else {
                     ToyManager.instance.updateState(ToyManager.draculaState.Comic1);
                 }
+                AudioManager.instance.playEffect("Pageturn");
                 break;
             case "Dracula":
                 ToyManager.instance.updateState(ToyManager.draculaState.Smoke);

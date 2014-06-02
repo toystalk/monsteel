@@ -865,6 +865,97 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
+--- !u!1 &1986802285
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1986802287}
+  - 114: {fileID: 1986802286}
+  m_Layer: 0
+  m_Name: AudioContainer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1986802286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1986802285}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 709385ff5fc89574aaa4478d08c09887, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioList:
+  - name: Fireplace
+    content: {fileID: 8300000, guid: dd52072322390e542901f53de8bfd297, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Discoscratch
+    content: {fileID: 8300000, guid: dd5876c5c6f1e3f408caf909dc85fa6b, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Batsqueak
+    content: {fileID: 8300000, guid: 0a8c0f0d026a6624d88de945444bfa95, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Batfly
+    content: {fileID: 8300000, guid: 0a8c0f0d026a6624d88de945444bfa95, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Pageturn
+    content: {fileID: 8300000, guid: 357ce2b614f13db459473253b63b8511, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Puff
+    content: {fileID: 8300000, guid: 6ebc812a73a49e74d961146dc671106b, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Quickmusic
+    content: {fileID: 8300000, guid: 38c0021e99d868f41a8b2d82f3e4e66d, type: 3}
+    source: {fileID: 0}
+    loop: 1
+  - name: Puff2
+    content: {fileID: 8300000, guid: 36eb331e2dcce314d9638e462c4c62b5, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Barulho
+    content: {fileID: 8300000, guid: a205003071a150a4faccf74001ac3012, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Teeth
+    content: {fileID: 8300000, guid: 9d389199051a51d4e84d8c195e314c25, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Gate
+    content: {fileID: 8300000, guid: 7fee7115be8d65a47ab8bc1d343ab03f, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: Gatereverse
+    content: {fileID: 8300000, guid: f6eec74489f1ab143a0c6f785067bd14, type: 3}
+    source: {fileID: 0}
+    loop: 0
+  - name: BatRA
+    content: {fileID: 8300000, guid: a66243011b8b14f41bcbaf7728bd9780, type: 3}
+    source: {fileID: 0}
+    loop: 0
+--- !u!4 &1986802287
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1986802285}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .17562747, y: -.642729878, z: 28.7925224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &2083891079
 GameObject:
   m_ObjectHideFlags: 0
@@ -875,6 +966,8 @@ GameObject:
   - 4: {fileID: 2083891080}
   - 20: {fileID: 2083891082}
   - 114: {fileID: 2083891081}
+  - 81: {fileID: 2083891083}
+  - 82: {fileID: 2083891084}
   m_Layer: 10
   m_Name: Camera
   m_TagString: Untagged
@@ -957,3 +1050,68 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_HDR: 0
   m_OcclusionCulling: 1
+--- !u!81 &2083891083
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2083891079}
+  m_Enabled: 1
+--- !u!82 &2083891084
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2083891079}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2

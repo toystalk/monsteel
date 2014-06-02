@@ -28,8 +28,9 @@ GameObject:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400008}
   - 114: {fileID: 11400006}
+  - 114: {fileID: 11400094}
   m_Layer: 10
-  m_Name: Dialog
+  m_Name: Quickmusic
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -63,8 +64,9 @@ GameObject:
   - 114: {fileID: 11400016}
   - 114: {fileID: 11400014}
   - 114: {fileID: 11400012}
+  - 114: {fileID: 11400134}
   m_Layer: 10
-  m_Name: Sprite
+  m_Name: Fireplace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,8 +83,9 @@ GameObject:
   - 114: {fileID: 11400022}
   - 114: {fileID: 11400020}
   - 114: {fileID: 11400018}
+  - 114: {fileID: 11400130}
   m_Layer: 10
-  m_Name: DJ
+  m_Name: Discoscratch
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -262,8 +265,9 @@ GameObject:
   - 114: {fileID: 11400078}
   - 54: {fileID: 5400004}
   - 114: {fileID: 11400076}
+  - 114: {fileID: 11400132}
   m_Layer: 10
-  m_Name: PanelFrame2
+  m_Name: Batfly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -281,8 +285,9 @@ GameObject:
   - 114: {fileID: 11400084}
   - 114: {fileID: 11400082}
   - 114: {fileID: 11400080}
+  - 114: {fileID: 11400138}
   m_Layer: 10
-  m_Name: BAT
+  m_Name: Batsqueak
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,9 +323,8 @@ GameObject:
   - 114: {fileID: 11400100}
   - 114: {fileID: 11400098}
   - 114: {fileID: 11400096}
-  - 114: {fileID: 11400094}
   m_Layer: 10
-  m_Name: PUF
+  m_Name: Puff
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -439,8 +443,9 @@ GameObject:
   - 114: {fileID: 11400128}
   - 114: {fileID: 11400126}
   - 114: {fileID: 11400124}
+  - 114: {fileID: 11400136}
   m_Layer: 10
-  m_Name: Sprite
+  m_Name: Batfly
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -988,7 +993,10 @@ MonoBehaviour:
   duration: 1
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 11400094}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: 0
@@ -1117,7 +1125,10 @@ MonoBehaviour:
   duration: .699999988
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 11400134}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: 0
@@ -1239,11 +1250,14 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   ignoreTimeScale: 1
-  delay: 3.20000005
+  delay: 9.19999981
   duration: 1
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 11400130}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: 70, y: -241.000061, z: 0}
@@ -1632,7 +1646,10 @@ MonoBehaviour:
   duration: .5
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 0}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: 0
@@ -2430,7 +2447,10 @@ MonoBehaviour:
   duration: 1
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 11400132}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: -525, y: 0, z: 0}
@@ -2507,7 +2527,7 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
   ignoreTimeScale: 1
-  delay: 2
+  delay: 5
   duration: .300000012
   steeperCurves: 0
   tweenGroup: 0
@@ -2747,7 +2767,7 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 100034}
+  m_GameObject: {fileID: 100002}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
@@ -2844,10 +2864,7 @@ MonoBehaviour:
   duration: .300000012
   steeperCurves: 0
   tweenGroup: 0
-  onFinished:
-  - mTarget: {fileID: 11400094}
-    mMethodName: OnFinished
-    oneShot: 0
+  onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: .300000012, y: .300000012, z: .300000012}
@@ -3443,7 +3460,10 @@ MonoBehaviour:
   duration: .899999976
   steeperCurves: 0
   tweenGroup: 0
-  onFinished: []
+  onFinished:
+  - mTarget: {fileID: 11400136}
+    mMethodName: TriggerAudio
+    oneShot: 0
   eventReceiver: {fileID: 0}
   callWhenFinished: 
   from: {x: 3, y: 242, z: 0}
@@ -3498,6 +3518,61 @@ MonoBehaviour:
   rightType: 1
   bottomType: 1
   topType: 1
+--- !u!114 &11400130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400132
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400134
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400136
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11400138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6051c149395087b4a8cecb2583410efd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
