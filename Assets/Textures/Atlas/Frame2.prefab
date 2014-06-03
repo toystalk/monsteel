@@ -42,7 +42,7 @@ MonoBehaviour:
   mSprites:
   - name: p1_frame02_balloon
     x: 0
-    y: 180
+    y: 159
     width: 565
     height: 274
     borderLeft: 0
@@ -68,7 +68,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: p1_frame02_frank
     x: 0
-    y: 838
+    y: 831
     width: 729
     height: 623
     borderLeft: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: p1_frame02_lobo
-    x: 730
-    y: 1178
+    x: 737
+    y: 1171
     width: 516
     height: 283
     borderLeft: 0
@@ -93,8 +93,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: p1_frame02_morcego
-    x: 1588
-    y: 1535
+    x: 1602
+    y: 1528
     width: 379
     height: 215
     borderLeft: 0
@@ -106,7 +106,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: p1_frame02_peso
-    x: 1588
+    x: 1602
     y: 1751
     width: 425
     height: 297
@@ -119,7 +119,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: p1_frame02_peso_miss
-    x: 1025
+    x: 1032
     y: 1558
     width: 562
     height: 490
@@ -133,7 +133,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: p1_frame02_peso_mumia
     x: 0
-    y: 455
+    y: 441
     width: 669
     height: 382
     borderLeft: 0
@@ -145,8 +145,8 @@ MonoBehaviour:
     paddingTop: 10
     paddingBottom: 0
   - name: p1_frame02_peso_notes
-    x: 1247
-    y: 1253
+    x: 1261
+    y: 1246
     width: 618
     height: 208
     borderLeft: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
     paddingBottom: 1
   - name: p1_frame02_peso_puequeno
     x: 0
-    y: 76
+    y: 48
     width: 226
     height: 103
     borderLeft: 0

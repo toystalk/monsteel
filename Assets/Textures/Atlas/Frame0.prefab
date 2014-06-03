@@ -42,7 +42,7 @@ MonoBehaviour:
   mSprites:
   - name: p1_fundo_baloon
     x: 0
-    y: 266
+    y: 252
     width: 191
     height: 190
     borderLeft: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: p1_fundo_dracula
-    x: 683
+    x: 690
     y: 1297
     width: 851
     height: 751
@@ -81,7 +81,7 @@ MonoBehaviour:
     paddingBottom: 0
   - name: p1_fundo_velas
     x: 0
-    y: 457
+    y: 450
     width: 597
     height: 566
     borderLeft: 0

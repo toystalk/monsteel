@@ -55,9 +55,9 @@ MonoBehaviour:
     paddingBottom: 0
   - name: drac_low
     x: 0
-    y: 466
-    width: 494
-    height: 550
+    y: 464
+    width: 496
+    height: 552
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -81,7 +81,7 @@ MonoBehaviour:
     paddingBottom: 110
   - name: silhueta_line
     x: 0
-    y: 10
+    y: 8
     width: 318
     height: 448
     borderLeft: 0

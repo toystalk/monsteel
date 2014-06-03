@@ -93,6 +93,7 @@ public class ToyManager : Singleton<ToyManager> {
     public void updateState (draculaState nextState) {
         switch (nextState) {
             case draculaState.PreRA:
+                AudioManager.instance.stopBGM();
                 resetComic("comic1");
                 resetComic("comic2");
                 //centerVuforiaCameraRect();
@@ -101,11 +102,13 @@ public class ToyManager : Singleton<ToyManager> {
                 showCoverPanel(1);
                 break;
             case draculaState.Comic1:
+                AudioManager.instance.stopBGM();
                 resetComic("comic2");
                 comic1.SetActive(true);
                 comic2.SetActive(false);
                 break;
             case draculaState.Comic2:
+                AudioManager.instance.stopBGM();
                 if (currentState == draculaState.Smoke) {
                     showUpEffect.Stop();
                     dracula.SetActive(false);
@@ -117,6 +120,7 @@ public class ToyManager : Singleton<ToyManager> {
                 comic1.SetActive(false);
                 break;
             case draculaState.Smoke:
+                AudioManager.instance.stopBGM();
                 //resetVuforiaCameraRect();
                 resetComic("comic2");
                 findDraculaPanel.SetActive(true);

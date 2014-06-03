@@ -52,20 +52,20 @@ MonoBehaviour:
     paddingLeft: 0
     paddingRight: 0
     paddingTop: 0
-    paddingBottom: 5
+    paddingBottom: 0
   - name: p2_frame06_balloon_02
     x: 367
-    y: 129
+    y: 127
     width: 229
-    height: 173
+    height: 175
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
-    paddingLeft: 0
+    paddingLeft: 2
     paddingRight: 0
-    paddingTop: 1
-    paddingBottom: 1
+    paddingTop: 2
+    paddingBottom: 0
   - name: p2_frame06_balloon_03
     x: 697
     y: 176

@@ -41,7 +41,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 9d89ed011052d1f43bbf22d6afcc96c0, type: 2}
   mSprites:
   - name: alvo
-    x: 648
+    x: 0
     y: 1024
     width: 640
     height: 1024
@@ -54,8 +54,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: back_buttom
-    x: 1296
-    y: 1593
+    x: 287
+    y: 34
     width: 204
     height: 112
     borderLeft: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: bg_inicial
-    x: 0
+    x: 648
     y: 1024
     width: 640
     height: 1024
@@ -105,6 +105,19 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 308
+  - name: loading
+    x: 0
+    y: 23
+    width: 225
+    height: 94
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 1
+    paddingBottom: 0
   - name: menu_buttom
     x: 287
     y: 154
@@ -119,8 +132,8 @@ MonoBehaviour:
     paddingTop: 5
     paddingBottom: 0
   - name: next_buttom
-    x: 287
-    y: 34
+    x: 1296
+    y: 1593
     width: 204
     height: 112
     borderLeft: 0
