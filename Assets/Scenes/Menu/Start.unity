@@ -7731,11 +7731,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToLoad.Array.data[0]
-      value: Toystalk_Frank
+      value: Toystalk_Dracula
       objectReference: {fileID: 0}
     - target: {fileID: 11400002, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: mDataSetsToActivate.Array.data[0]
-      value: Toystalk_Frank
+      value: Toystalk_Dracula
       objectReference: {fileID: 0}
     - target: {fileID: 2000000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: field of view
@@ -12484,9 +12484,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mDataSetsToActivate:
-  - Toystalk_Frank
+  - Toystalk_Dracula
   mDataSetsToLoad:
-  - Toystalk_Frank
+  - Toystalk_Dracula
 --- !u!114 &1183364762
 MonoBehaviour:
   m_ObjectHideFlags: 0

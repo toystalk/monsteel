@@ -42,7 +42,7 @@ MonoBehaviour:
   mSprites:
   - name: bg_silhueta
     x: 0
-    y: 1024
+    y: 91
     width: 640
     height: 1024
     borderLeft: 0
@@ -54,8 +54,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: drac_low
-    x: 0
-    y: 464
+    x: 776
+    y: 1496
     width: 496
     height: 552
     borderLeft: 0
@@ -66,8 +66,21 @@ MonoBehaviour:
     paddingRight: 0
     paddingTop: 0
     paddingBottom: 0
+  - name: frank_low
+    x: 0
+    y: 1123
+    width: 768
+    height: 925
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 60
+    paddingRight: 56
+    paddingTop: 43
+    paddingBottom: 32
   - name: silhueta_behind_glow
-    x: 648
+    x: 1280
     y: 1505
     width: 413
     height: 543
@@ -80,8 +93,8 @@ MonoBehaviour:
     paddingTop: 371
     paddingBottom: 110
   - name: silhueta_line
-    x: 0
-    y: 8
+    x: 1701
+    y: 1600
     width: 318
     height: 448
     borderLeft: 0
