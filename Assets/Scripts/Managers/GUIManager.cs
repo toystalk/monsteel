@@ -129,6 +129,9 @@ public class GUIManager : Singleton<GUIManager> {
             case "Dracula":
                 ToyManager.instance.updateState(ToyManager.draculaState.Smoke);
                 break;
+            case "Frank":
+                ToyManager.instance.updateState(ToyManager.draculaState.Smoke);
+                break;
             default:
                 break;
         }

@@ -39,10 +39,11 @@ public class ToyManager : Singleton<ToyManager> {
 	
 	//Update is called once per frame
 	void Update () {
-        if (Input.touchCount > 0 && batEffect.isStopped && dracula.activeSelf==true) {
+        /* INPUT DISABLED FOR FRANK
+         * if (Input.touchCount > 0 && batEffect.isStopped && dracula.activeSelf==true) {
             batEffect.Play();
             AudioManager.instance.playEffect("BatRA");
-        }
+        }*/
 	}
 
     public void DraculaFoundCallback () {
