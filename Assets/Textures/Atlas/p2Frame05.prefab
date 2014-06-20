@@ -50,8 +50,8 @@ MonoBehaviour:
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
-    paddingRight: 0
-    paddingTop: 1
+    paddingRight: 4
+    paddingTop: 2
     paddingBottom: 0
   - name: p2_frame05_bg
     x: 0

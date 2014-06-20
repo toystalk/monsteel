@@ -106,8 +106,28 @@ public class GUIManager : Singleton<GUIManager> {
         switch (button) {
 			case "buttonName":
 				break;
-            case "ButtonStart":
-                FindObjectOfType<FadeScreen>().FadeScene();
+            case "StartButton":
+                ToyManager.instance.startComic();
+                break;
+            case "MenuButton":
+                ToyManager.instance.updateState(ToyManager.draculaState.PreRA);
+                break;
+            case "NextButton":
+                ToyManager.instance.updateState(ToyManager.draculaState.Comic2);
+                AudioManager.instance.stopBGM();
+                AudioManager.instance.playEffect("Pageturn");
+                break;
+            case "BackButton":
+                if (ToyManager.instance.currentState == ToyManager.draculaState.Smoke) {
+                    ToyManager.instance.updateState(ToyManager.draculaState.Comic2);
+                }
+                else {
+                    ToyManager.instance.updateState(ToyManager.draculaState.Comic1);
+                }
+                AudioManager.instance.playEffect("Pageturn");
+                break;
+            case "Dracula":
+                ToyManager.instance.updateState(ToyManager.draculaState.Smoke);
                 break;
             default:
                 break;
@@ -121,7 +141,8 @@ public class GUIManager : Singleton<GUIManager> {
             case "contentName":
                 break;
             case "FadeSplash":
-                GameManager.instance.startGame();
+                GameManager.instance.waitToLoad=false;
+                //GameManager.instance.startGame();
                 break;
             case "FadeStart":
                 Destroy(content);

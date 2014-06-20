@@ -31,7 +31,7 @@ public class AudioManager : Singleton<AudioManager> {
                     }
                 }
                 Debug.Log("UNITY - GameObject go ref : " + go);
-                if (go!=null) {
+                if (go != null) {
                     _masterBGM = go.GetComponent<AudioSource>();
                     if (_masterBGM == null) {
                         _masterBGM = go.AddComponent<AudioSource>() as AudioSource;
@@ -88,16 +88,16 @@ public class AudioManager : Singleton<AudioManager> {
     public List<AudioContent> audioList;
 
     // Use this for initialization
-    void Awake() {
+    void Awake () {
         initSources();
     }
 
     // Update is called once per frame
-    void Update() {
+    void Update () {
     }
 
     // Initializes both master audio sources (BGM and Effects) 
-    public void initSources() {
+    public void initSources () {
         if (!masterBGM) {
             Debug.Log("Failed to initialize MasterBGM AudioSource, reference :" + masterBGM);
         }
@@ -120,44 +120,86 @@ public class AudioManager : Singleton<AudioManager> {
     }
 
     // Searches the audio list after the string received and plays the audio from masterBGM
-    public void playBGM(string audio) {
-        // Find audio in the list and play from mastersource
-        AudioContent som = audioList.Find(
-            delegate(AudioContent ac) {
-                return ac.name == audio;
-            });
+    public void playBGM (string audio) {
+        try {
+            // Find audio in the list and play from mastersource
+            AudioContent som = audioList.Find(
+                delegate(AudioContent ac) {
+                    return ac.name == audio;
+                });
 
-        if (som != null) {
-            if (som.source == null) {
-                masterBGM.audio.clip = som.content;
-                masterBGM.loop = som.loop;
-                masterBGM.Play();
+            if (som != null) {
+                if (som.source == null) {
+                    masterBGM.audio.clip = som.content;
+                    masterBGM.loop = som.loop;
+                    masterBGM.Play();
+                }
+                else {
+                    AudioSource tempSource = som.source;
+                    tempSource.audio.clip = som.content;
+                    tempSource.loop = som.loop;
+                    tempSource.Play();
+                }
             }
-            else {
-                AudioSource tempSource = som.source;
-                tempSource.audio.clip = som.content;
-                tempSource.loop = som.loop;
-                tempSource.Play();
-            }
+        }
+        catch (Exception error) {
+            Debug.Log(error.Message);
         }
     }
 
     // Searches the audio list after the string received and plays the audio from masterEffects
-    public void playEffect(string audio) {
-        Debug.Log("UNITY - Audio Effect playing at " + AudioManager.instance + " with audio "+audio);
-        // Find audio in the list and play from mastersource
-        AudioContent som = audioList.Find(
-            delegate(AudioContent ac) {
-                return ac.name == audio;
-            });
+    public void playEffect (string audio) {
+        Debug.Log("UNITY - Audio Effect playing at " + AudioManager.instance + " with audio " + audio);
 
-        if (som != null) { 
-            if (som.source == null) {
-                masterEffects.PlayOneShot(som.content);
+        try {
+            // Find audio in the list and play from mastersource
+            AudioContent som = audioList.Find(
+                delegate(AudioContent ac) {
+                    return ac.name == audio;
+                });
+
+            if (som != null) {
+                if (som.source == null) {
+                    masterEffects.PlayOneShot(som.content);
+                }
+                else {
+                    som.source.PlayOneShot(som.content);
+                }
             }
-            else {
-                som.source.PlayOneShot(som.content);
+
+        }
+        catch (Exception error) {
+            Debug.Log(error.Message);
+        }
+    }
+
+    public void stopBGM () {
+        masterBGM.Stop();
+    }
+
+    // Searches the audio list after the string received and plays the audio from masterEffects
+    public void playEffectVol (string audio, float vol) {
+        Debug.Log("UNITY - Audio Effect playing at " + AudioManager.instance + " with audio " + audio);
+        try {
+            // Find audio in the list and play from mastersource
+            AudioContent som = audioList.Find(
+                delegate(AudioContent ac) {
+                    return ac.name == audio;
+                });
+
+            if (som != null) {
+
+                if (som.source == null) {
+                    masterEffects.PlayOneShot(som.content, vol);
+                }
+                else {
+                    som.source.PlayOneShot(som.content, vol);
+                }
             }
+
+        }
+        catch (Exception error) {
+            Debug.Log(error.Message);
         }
     }
 
@@ -169,5 +211,5 @@ public class AudioManager : Singleton<AudioManager> {
         yield return new WaitForSeconds(afterSecs);
         AudioManager.instance.playEffect(audio);
     }
-    
+
 }

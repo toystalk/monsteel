@@ -41,7 +41,7 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 5846c4efddd54944b858d3e3b59b79cd, type: 2}
   mSprites:
   - name: p1_frame01_baloon
-    x: 1025
+    x: 1032
     y: 1814
     width: 535
     height: 234
@@ -67,8 +67,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: p1_frame01_moecego
-    x: 1025
-    y: 1642
+    x: 1032
+    y: 1635
     width: 295
     height: 171
     borderLeft: 0
@@ -80,8 +80,8 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: p1_frame01_puf
-    x: 1321
-    y: 1744
+    x: 1335
+    y: 1737
     width: 123
     height: 69
     borderLeft: 0
@@ -93,7 +93,7 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: p1_frame01_speed
-    x: 1561
+    x: 1575
     y: 1858
     width: 457
     height: 190

@@ -16,7 +16,7 @@ public class FadeScreen : MonoBehaviour {
 	}
 	
     public void OnFinished () {
-        FadeScene();
+        //FadeScene();
     }
 
     public void FadeScene () {
@@ -35,16 +35,11 @@ public class FadeScreen : MonoBehaviour {
     }
 
     IEnumerator FadeStart () {
-        yield return new WaitForSeconds(2);
-        fadeTween.PlayReverse();
-        yield return new WaitForSeconds(2);
-        GameManager.instance.startGame();
-    }
+        yield return new WaitForSeconds(3);
+        fadeTween.PlayReverse(); //fadeOut
 
-    IEnumerator FadeAR1 () {
-        yield return new WaitForSeconds(2);
-        fadeTween.PlayReverse();
-        yield return new WaitForSeconds(2);
-        GameManager.instance.updateState(GameManager.GameState.DraculaAR1);
+        yield return new WaitForSeconds(3);
+        GameManager.instance.waitToLoad = false;
+        //GameManager.instance.startGame();
     }
 }

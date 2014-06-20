@@ -41,16 +41,16 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 29e2e37e21656e046a0b23fff8b2c1c0, type: 2}
   mSprites:
   - name: p2_frame04_balloon
-    x: 0
-    y: 349
-    width: 623
-    height: 195
+    x: 303
+    y: 360
+    width: 593
+    height: 184
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
-    paddingRight: 0
+    paddingRight: 1
     paddingTop: 0
     paddingBottom: 0
   - name: p2_frame04_bg
@@ -80,7 +80,7 @@ MonoBehaviour:
     paddingTop: 1
     paddingBottom: 0
   - name: p2_frame04_miss
-    x: 631
+    x: 0
     y: 153
     width: 295
     height: 391

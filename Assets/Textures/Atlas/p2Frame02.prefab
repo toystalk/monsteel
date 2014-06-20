@@ -42,17 +42,17 @@ MonoBehaviour:
   mSprites:
   - name: p2_frame02_balloon
     x: 687
-    y: 327
-    width: 278
-    height: 185
+    y: 326
+    width: 277
+    height: 186
     borderLeft: 0
     borderRight: 0
     borderTop: 0
     borderBottom: 0
     paddingLeft: 0
-    paddingRight: 0
+    paddingRight: 1
     paddingTop: 0
-    paddingBottom: 1
+    paddingBottom: 0
   - name: p2_frame02_full
     x: 0
     y: 81

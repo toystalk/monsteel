@@ -16,9 +16,6 @@ public class GameManager : Singleton<GameManager> {
     public enum GameState {
         Splash,
         Start,
-		PreGame,
-		DraculaAR1,
-		PosGame
     }
 
     public GameState currentState;// Keeps tracking of the current State of the game
@@ -32,10 +29,16 @@ public class GameManager : Singleton<GameManager> {
 
     StateUpdate currentUpdate; // Manages wanted updates to be ran    
 
+    public bool waitToLoad;
+
 // Keep track of state change in the editor, being used to trigger arbitrary changes
 #if UNITY_EDITOR
     public bool stateChanged = false;
 #endif
+
+    void Start () {
+        startGame();
+    }
 
     // Use this for initialization
     void Awake() {
@@ -85,7 +88,8 @@ public class GameManager : Singleton<GameManager> {
     }
 
     // Starts the game updating a current state to begin
-    public void startGame() {
+    public void startGame () {
+        waitToLoad = true;
         //starts the game
         updateState(GameState.Start);
     }
@@ -128,9 +132,6 @@ public class GameManager : Singleton<GameManager> {
             case GameState.Splash:                
                 GUIManager.instance.updateMainContent(currentState.ToString());
                 break;
-            case GameState.DraculaAR1:
-                //GUIManager.instance.updateMainContent(currentState.ToString());
-                break;
             default:
                 break;
         }
@@ -138,21 +139,38 @@ public class GameManager : Singleton<GameManager> {
 
 	// Routine responsible for loading a level async, updating UI content after.
     IEnumerator load(string levelToLoad) {
-        Debug.Log("LOADING : " + levelToLoad);
+        if (waitToLoad) {
+            yield return new WaitForSeconds(2.0f);
+            LoadScreen.loadIn();
+            yield return new WaitForSeconds(4f);
+            GameObject.Find("UI Root").name = "UITransition";
+        }
+
+        Debug.Log("LOADING : " + levelToLoad);   
         AsyncOperation async = Application.LoadLevelAsync(levelToLoad);
         async.allowSceneActivation = false;
         do {
             yield return new WaitForSeconds(1.0f);
         } while (async.isDone);
-        
+       
         async.allowSceneActivation = true;
+        
         do {
             yield return new WaitForSeconds(0.01f);
         } while (Application.loadedLevelName != levelToLoad);
 
         currentScene = Application.loadedLevelName;
+        Debug.Log("LOADING : " + currentScene + " COMPLETE.");
+
+        if (waitToLoad) {
+            LoadScreen.updateRoot();
+            yield return new WaitForSeconds(1.0f);
+            LoadScreen.loadOut();
+            waitToLoad = false;
+        }
         GUIManager.instance.initContents();
         AudioManager.instance.initSources();
         updateGUI();
     }
+
 }
