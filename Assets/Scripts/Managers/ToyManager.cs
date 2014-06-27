@@ -63,7 +63,7 @@ public class ToyManager : Singleton<ToyManager> {
                     AudioManager.instance.playEffect("Puff2");
                 }
                 dracula.SetActive(true);
-                batEffect.Stop();
+                //batEffect.Stop();
                 break;
             default:
                 break;
@@ -82,7 +82,7 @@ public class ToyManager : Singleton<ToyManager> {
             case draculaState.Smoke:
                 findDraculaPanel.SetActive(true);
                 showUpEffect.Stop();
-                batEffect.Stop();
+                //batEffect.Stop();
                 dracula.SetActive(false);
                 break;
             default:
