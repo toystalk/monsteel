@@ -39,10 +39,11 @@ public class ToyManager : Singleton<ToyManager> {
 	
 	//Update is called once per frame
 	void Update () {
-        if (Input.touchCount > 0 && batEffect.isStopped && dracula.activeSelf==true) {
+        /* INPUT DISABLED FOR FRANK
+         * if (Input.touchCount > 0 && batEffect.isStopped && dracula.activeSelf==true) {
             batEffect.Play();
             AudioManager.instance.playEffect("BatRA");
-        }
+        }*/
 	}
 
     public void DraculaFoundCallback () {
@@ -62,7 +63,7 @@ public class ToyManager : Singleton<ToyManager> {
                     AudioManager.instance.playEffect("Puff2");
                 }
                 dracula.SetActive(true);
-                batEffect.Stop();
+                //batEffect.Stop();
                 break;
             default:
                 break;
@@ -81,7 +82,7 @@ public class ToyManager : Singleton<ToyManager> {
             case draculaState.Smoke:
                 findDraculaPanel.SetActive(true);
                 showUpEffect.Stop();
-                batEffect.Stop();
+                //batEffect.Stop();
                 dracula.SetActive(false);
                 break;
             default:
