@@ -3,18 +3,21 @@ using System.Collections;
 
 public class ToyManager : Singleton<ToyManager> {
     [SerializeField]
-    ParticleSystem showUpEffect;
+    ParticleSystem showUpEffectDracula;
+    [SerializeField]
+    ParticleSystem showUpEffectFrank;
     [SerializeField]
     ParticleSystem batEffect;
 
-    public enum draculaState {
+    public enum toyRenderState {
         PreRA,
         Comic1,
         Comic2,
         Bats,
-        Smoke
+        Smoke,
+        Frank
     }
-    public draculaState currentState;
+    public toyRenderState currentState;
 
     public GameObject comic1Prefab;
     public GameObject comic2Prefab;
@@ -23,10 +26,14 @@ public class ToyManager : Singleton<ToyManager> {
 
     public GameObject backDraculaPanel;
     public GameObject findDraculaPanel;
-    public GameObject coverPanel;
-    public GameObject startObj;
+    public GameObject coverPanelDracula;
+    public GameObject coverPanelFrank;
+    public GameObject startObj1;
+    public GameObject startObj2;
     public GameObject dracula;
     public GameObject draculaFill;
+    public GameObject frank;
+    public GameObject frankFill;
 
     Camera ARBGCamera;
 
@@ -34,35 +41,81 @@ public class ToyManager : Singleton<ToyManager> {
 	IEnumerator Start () {
         yield return new WaitForSeconds(0.2f);
         //centerVuforiaCameraRect();
+        switch (GameManager.instance.currentToy) {
+            case GameManager.ToyState.Dracula:
+                GameManager.instance.currentToy = GameManager.ToyState.Dracula;
+                coverPanelDracula.SetActive(true);
+                coverPanelFrank.SetActive(false);
+                dracula.SetActive(false);
+                break;
+            case GameManager.ToyState.Frank:
+                GameManager.instance.currentToy = GameManager.ToyState.Frank;
+                coverPanelDracula.SetActive(false);
+                coverPanelFrank.SetActive(true);
+                frank.SetActive(false);
+                break;
+            default:
+                break;
+
+
+        }
         //CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 	}
 	
 	//Update is called once per frame
 	void Update () {
-        /* INPUT DISABLED FOR FRANK
-         * if (Input.touchCount > 0 && batEffect.isStopped && dracula.activeSelf==true) {
+        // INPUT DISABLED FOR FRANK
+         if (Input.touchCount > 0 && batEffect.isStopped && dracula.activeSelf==true && currentState == toyRenderState.Smoke) {
             batEffect.Play();
             AudioManager.instance.playEffect("BatRA");
-        }*/
+        }
 	}
 
-    public void DraculaFoundCallback () {
+    public void ToyFoundCallback () {
         switch (currentState) {
-            case draculaState.PreRA:
-                if (draculaFill.activeSelf == false) {
-                    startDraculaComic();
-                }
+            case toyRenderState.PreRA:
+                frank.SetActive(false);
+                dracula.SetActive(false);
+                switch(GameManager.instance.currentToy){
+                    case GameManager.ToyState.Dracula:
+                        if (draculaFill.activeSelf == false) {
+                            startDraculaComic();
+                        }
+                        break;
+                    case GameManager.ToyState.Frank:
+                        if (frankFill.activeSelf == false) {
+                            startDraculaComic();
+                        }
+                        break;
+                    default:
+                        break;
+                }                
                 break;
-            case draculaState.Comic1:
+            case toyRenderState.Comic1:
                 //comic1.SetActive(true);
                 break;
-            case draculaState.Smoke:
-                findDraculaPanel.SetActive(false);                
-                if (showUpEffect.isPlaying == false) {
-                    showUpEffect.Play();
-                    AudioManager.instance.playEffect("Puff2");
+            case toyRenderState.Smoke:
+                findDraculaPanel.SetActive(false);
+                switch(GameManager.instance.currentToy){
+                    case GameManager.ToyState.Dracula:
+                        if (showUpEffectDracula.isPlaying == false) {
+                            showUpEffectDracula.Play();
+                            batEffect.Stop();
+                            AudioManager.instance.playEffect("Puff2");
+                        }
+                        dracula.SetActive(true);
+                        break;
+                    case GameManager.ToyState.Frank:
+                        if (showUpEffectFrank.isPlaying == false) {
+                            showUpEffectFrank.Play();
+                            AudioManager.instance.playEffect("Puff2");
+                        }
+                        frank.SetActive(true);
+                        break;
+                    default:
+                        break;
                 }
-                dracula.SetActive(true);
+                
                 //batEffect.Stop();
                 break;
             default:
@@ -73,17 +126,29 @@ public class ToyManager : Singleton<ToyManager> {
         Debug.Log("Dracula tracking Found CallBack");
     }
 
-    public void DraculaLostCallback () {
+    public void ToyLostCallback () {
         switch (currentState) {
-            case draculaState.PreRA:
+            case toyRenderState.PreRA:
                 break;
-            case draculaState.Comic1:
+            case toyRenderState.Comic1:
                 break;
-            case draculaState.Smoke:
+            case toyRenderState.Smoke:
                 findDraculaPanel.SetActive(true);
-                showUpEffect.Stop();
+
+                switch (GameManager.instance.currentToy) {
+                    case GameManager.ToyState.Dracula:
+                        showUpEffectDracula.Stop();
+                        dracula.SetActive(false);
+                        batEffect.Stop();
+                        break;
+                    case GameManager.ToyState.Frank:
+                        showUpEffectFrank.Stop();
+                        frank.SetActive(false);
+                        break;
+                    default:
+                        break;
+                }
                 //batEffect.Stop();
-                dracula.SetActive(false);
                 break;
             default:
                 break;
@@ -91,28 +156,43 @@ public class ToyManager : Singleton<ToyManager> {
         Debug.Log("Dracula tracking Lost CallBack");
     }
 
-    public void updateState (draculaState nextState) {
+    public void updateState (toyRenderState nextState) {
         switch (nextState) {
-            case draculaState.PreRA:
+            case toyRenderState.PreRA:
                 AudioManager.instance.stopBGM();
                 resetComic("comic1");
                 resetComic("comic2");
                 //centerVuforiaCameraRect();
-                startObj.SetActive(false);
+                startObj1.SetActive(false);
+                startObj2.SetActive(false);
                 draculaFill.SetActive(false);
+                frankFill.SetActive(false);
+                dracula.SetActive(false);
+                frank.SetActive(false);
                 showCoverPanel(1);
                 break;
-            case draculaState.Comic1:
+            case toyRenderState.Comic1:
                 AudioManager.instance.stopBGM();
                 resetComic("comic2");
                 comic1.SetActive(true);
                 comic2.SetActive(false);
                 break;
-            case draculaState.Comic2:
+            case toyRenderState.Comic2:
                 AudioManager.instance.stopBGM();
-                if (currentState == draculaState.Smoke) {
-                    showUpEffect.Stop();
-                    dracula.SetActive(false);
+                if (currentState == toyRenderState.Smoke) {
+                    switch (GameManager.instance.currentToy) {
+                        case GameManager.ToyState.Dracula:
+                            showUpEffectDracula.Stop();
+                            dracula.SetActive(false);
+                            batEffect.Stop();
+                            break;
+                        case GameManager.ToyState.Frank:
+                            showUpEffectFrank.Stop();
+                            frank.SetActive(false);
+                            break;
+                        default:
+                            break;
+                    }
                     findDraculaPanel.SetActive(false);
                     backDraculaPanel.SetActive(false);
                 }
@@ -120,13 +200,13 @@ public class ToyManager : Singleton<ToyManager> {
                 comic2.SetActive(true);
                 comic1.SetActive(false);
                 break;
-            case draculaState.Smoke:
+            case toyRenderState.Smoke:
                 AudioManager.instance.stopBGM();
                 //resetVuforiaCameraRect();
                 resetComic("comic2");
                 findDraculaPanel.SetActive(true);
                 backDraculaPanel.SetActive(true);
-                if (currentState == draculaState.Comic1 || currentState == draculaState.Comic2) {
+                if (currentState == toyRenderState.Comic1 || currentState == toyRenderState.Comic2) {
                     comic2.SetActive(false);
                     comic1.SetActive(false);
                 }
@@ -160,37 +240,74 @@ public class ToyManager : Singleton<ToyManager> {
     }
 
     IEnumerator comicInitAnimation () {
-        updateState(draculaState.Comic1);
+        updateState(toyRenderState.Comic1);
         showCoverPanel(0);
         yield return new WaitForSeconds(1.0f);
-        startObj.SetActive(false);
+        startObj1.SetActive(false);
+        startObj2.SetActive(false);
         draculaFill.SetActive(false);
+        frankFill.SetActive(false);
     }
 
     IEnumerator comicStartAnimation(){
-        //Dracula clock
-        UISprite clock = draculaFill.GetComponent<UISprite>();
-        clock.fillAmount = 0;
-        draculaFill.SetActive(true);
-        do{
-            yield return new WaitForSeconds(0.01f);
-            clock.fillAmount+=0.01f;
-        }while(clock.fillAmount<1);
-        startObj.SetActive(true);
+        switch (GameManager.instance.currentToy) {
+            case GameManager.ToyState.Dracula:
+                if (draculaFill.activeSelf == false) {
+                    //Dracula clock
+                    UISprite clock = draculaFill.GetComponent<UISprite>();
+                    clock.fillAmount = 0;
+                    draculaFill.SetActive(true);
+                    do {
+                        yield return new WaitForSeconds(0.01f);
+                        clock.fillAmount += 0.01f;
+                    } while (clock.fillAmount < 1);
+                }
+                startObj1.SetActive(true);
+                break;
+            case GameManager.ToyState.Frank:
+                //Dracula clock
+                UISprite clock2 = frankFill.GetComponent<UISprite>();
+                clock2.fillAmount = 0;
+                frankFill.SetActive(true);
+                do {
+                    yield return new WaitForSeconds(0.01f);
+                    clock2.fillAmount += 0.01f;
+                } while (clock2.fillAmount < 1);
+                startObj2.SetActive(true);
+                break;
+            default:
+                break;
+        } 
     }
 
     void showCoverPanel (float show) {
-        startObj.SetActive(false);
-        foreach (Transform child in coverPanel.transform) {
-            TweenAlpha.Begin(child.gameObject, 0.5f, show);
-        }
+        startObj1.SetActive(false);
+        startObj2.SetActive(false);
+        switch (GameManager.instance.currentToy) {
+            case GameManager.ToyState.Dracula:
+                coverPanelDracula.SetActive(true);
+                coverPanelFrank.SetActive(false);
+                foreach (Transform child in coverPanelDracula.transform) {
+                    TweenAlpha.Begin(child.gameObject, 0.5f, show);
+                }
+                break;
+            case GameManager.ToyState.Frank:
+                coverPanelDracula.SetActive(false);
+                coverPanelFrank.SetActive(true);
+                foreach (Transform child in coverPanelFrank.transform) {
+                    TweenAlpha.Begin(child.gameObject, 0.5f, show);
+                }
+                break;
+            default:
+                break;
+        }      
     }
 
     void resetComic (string comic) {
         if (comic == "comic1") {
             Destroy(comic1);
             comic1 = Instantiate(comic1Prefab, comic1Prefab.transform.position, comic1Prefab.transform.rotation) as GameObject;
-            comic1.transform.parent = GameObject.Find("UI Root").transform;
+            comic1.transform.parent = GameObject.Find("_UI Root").transform;
             comic1.transform.position = comic1Prefab.transform.position;
             comic1.transform.localScale = comic1Prefab.transform.localScale;
             comic1.SetActive(false);
@@ -198,7 +315,7 @@ public class ToyManager : Singleton<ToyManager> {
         else if(comic == "comic2") {
             Destroy(comic2);
             comic2 = Instantiate(comic2Prefab, comic2Prefab.transform.position, comic2Prefab.transform.rotation) as GameObject;
-            comic2.transform.parent = GameObject.Find("UI Root").transform;
+            comic2.transform.parent = GameObject.Find("_UI Root").transform;
             comic2.transform.position = comic2Prefab.transform.position;
             comic2.transform.localScale = comic2Prefab.transform.localScale;
             comic2.SetActive(false);

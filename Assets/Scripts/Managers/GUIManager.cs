@@ -106,31 +106,43 @@ public class GUIManager : Singleton<GUIManager> {
         switch (button) {
 			case "buttonName":
 				break;
+            case "DraculaButton":
+                FindObjectOfType<TweenAlpha>().PlayReverse();
+                GameManager.instance.currentToy = GameManager.ToyState.Dracula;
+                GameManager.instance.updateState(GameManager.GameState.Splash);
+                break;
+            case "FrankButton":
+                FindObjectOfType<TweenAlpha>().PlayReverse();
+                GameManager.instance.currentToy = GameManager.ToyState.Frank;
+                GameManager.instance.updateState(GameManager.GameState.Splash);
+                break;
             case "StartButton":
                 ToyManager.instance.startComic();
                 break;
             case "MenuButton":
-                ToyManager.instance.updateState(ToyManager.draculaState.PreRA);
+                ToyManager.instance.updateState(ToyManager.toyRenderState.PreRA);
                 break;
             case "NextButton":
-                ToyManager.instance.updateState(ToyManager.draculaState.Comic2);
+                ToyManager.instance.updateState(ToyManager.toyRenderState.Comic2);
                 AudioManager.instance.stopBGM();
                 AudioManager.instance.playEffect("Pageturn");
                 break;
             case "BackButton":
-                if (ToyManager.instance.currentState == ToyManager.draculaState.Smoke) {
-                    ToyManager.instance.updateState(ToyManager.draculaState.Comic2);
+                if (ToyManager.instance.currentState == ToyManager.toyRenderState.Smoke) {
+                    ToyManager.instance.updateState(ToyManager.toyRenderState.Comic2);
                 }
                 else {
-                    ToyManager.instance.updateState(ToyManager.draculaState.Comic1);
+                    ToyManager.instance.updateState(ToyManager.toyRenderState.Comic1);
                 }
                 AudioManager.instance.playEffect("Pageturn");
                 break;
             case "Dracula":
-                ToyManager.instance.updateState(ToyManager.draculaState.Smoke);
+                GameManager.instance.currentToy = GameManager.ToyState.Dracula;
+                ToyManager.instance.updateState(ToyManager.toyRenderState.Smoke);
                 break;
             case "Frank":
-                ToyManager.instance.updateState(ToyManager.draculaState.Smoke);
+                GameManager.instance.currentToy = GameManager.ToyState.Frank;
+                ToyManager.instance.updateState(ToyManager.toyRenderState.Smoke);
                 break;
             default:
                 break;

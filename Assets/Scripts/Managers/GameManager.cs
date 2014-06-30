@@ -6,20 +6,48 @@
  * Written by Daniel Costa <danielcosta@toystalk.com>, April 2014
  */
 
-using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 // Class responsible for managing the entire game and it's required components for every moment
 public class GameManager : Singleton<GameManager> {
 
     // Game states, divided by every different moment of the game
     public enum GameState {
+        ToySelection,
         Splash,
         Start,
     }
 
+    public enum ToyState {
+        Frank,
+        Dracula
+    }
+
     public GameState currentState;// Keeps tracking of the current State of the game
     public GameState prevState;  // Keeps tracking of the previous State of the game
+
+    private ToyState _currentToy;
+    public ToyState currentToy {
+        get {
+            return _currentToy;
+        }
+        set {
+            switch (value) {
+                case ToyState.Dracula:
+                    ActivateDataSet("Toystalk_MissMonster");
+                    break;
+                case ToyState.Frank:
+                    ActivateDataSet("Toystalk_Frank");
+                    break;
+                default:
+                    break;
+            }
+            _currentToy = value;
+        }
+    }
 
     [SerializeField]
     private string currentScene; // Keeps tracking of the current scene
@@ -52,6 +80,9 @@ public class GameManager : Singleton<GameManager> {
 
     void Update() {
 // Keep track of state change in the editor
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            ActivateDataSet("something");
+        }
 #if UNITY_EDITOR
         if (stateChanged) {
             stateChanged = false;
@@ -89,9 +120,9 @@ public class GameManager : Singleton<GameManager> {
 
     // Starts the game updating a current state to begin
     public void startGame () {
-        waitToLoad = true;
+        //waitToLoad = true;
         //starts the game
-        updateState(GameState.Start);
+        updateState(GameState.ToySelection);
     }
 
     // Updates the current State of the game to the received one, saving the current as a previous
@@ -105,7 +136,7 @@ public class GameManager : Singleton<GameManager> {
             loadScene(currentState.ToString());
         }
         else {
-            updateGUI();
+            //updateGUI();
         }
     }
 
@@ -126,6 +157,9 @@ public class GameManager : Singleton<GameManager> {
     // Updates GUI according to the state of the game
     void updateGUI () {
         switch (currentState) {
+            case GameState.ToySelection:
+                GUIManager.instance.updateMainContent(currentState.ToString());
+                break;
             case GameState.Start:
                 GUIManager.instance.updateMainContent(currentState.ToString());
                 break;
@@ -139,14 +173,12 @@ public class GameManager : Singleton<GameManager> {
 
 	// Routine responsible for loading a level async, updating UI content after.
     IEnumerator load(string levelToLoad) {
-        if (waitToLoad) {
-            yield return new WaitForSeconds(2.0f);
+        Debug.Log("LOADING : " + levelToLoad);
+        if (currentState == GameState.Start) {
             LoadScreen.loadIn();
-            yield return new WaitForSeconds(4f);
-            GameObject.Find("UI Root").name = "UITransition";
+            yield return new WaitForSeconds(3.0f);           
         }
 
-        Debug.Log("LOADING : " + levelToLoad);   
         AsyncOperation async = Application.LoadLevelAsync(levelToLoad);
         async.allowSceneActivation = false;
         do {
@@ -161,16 +193,77 @@ public class GameManager : Singleton<GameManager> {
 
         currentScene = Application.loadedLevelName;
         Debug.Log("LOADING : " + currentScene + " COMPLETE.");
-
-        if (waitToLoad) {
-            LoadScreen.updateRoot();
-            yield return new WaitForSeconds(1.0f);
+        if (currentState == GameState.Start) {
+            yield return new WaitForSeconds(2.0f);
             LoadScreen.loadOut();
-            waitToLoad = false;
         }
-        GUIManager.instance.initContents();
+
         AudioManager.instance.initSources();
-        updateGUI();
+
+        if (currentState == GameState.Splash) {
+            yield return new WaitForSeconds(2.0f);
+            updateState(GameState.Start);
+        }
     }
 
+    private void ActivateDataSet (string datasetPath) {
+        /*ImageTracker tracks ImageTargets contained in a DataSet and provides methods for creating, activating and deactivating datasets.
+        ImageTracker imageTracker = TrackerManager.Instance.GetTracker<ImageTracker>();
+        IEnumerable<DataSet> datasets = imageTracker.GetDataSets();
+
+        IEnumerable<DataSet> activeDataSets = imageTracker.GetActiveDataSets();
+        List<DataSet> activeDataSetsToBeRemoved = activeDataSets.ToList();
+
+        //1. Loop through all the active datasets and deactivate them.
+        foreach (DataSet ads in activeDataSetsToBeRemoved) {
+            imageTracker.DeactivateDataSet(ads);
+        }
+
+        //Swapping of the datasets should not be done while the ImageTracker is working at the same time.
+        //2. So, Stop the tracker first.
+        imageTracker.Stop();
+
+        //3. Then, look up the new dataset and if one exists, activate it.
+        foreach (DataSet ds in datasets) {
+            if (ds.Path.Contains(datasetPath)) {
+                imageTracker.ActivateDataSet(ds);
+            }
+        }
+
+        //4. Finally, start the image tracker.
+        imageTracker.Start();*/
+        //Debug.Log(TrackerManager.Instance.GetTracker<ImageTracker>());
+        if (currentState == GameState.Start) {
+            ImageTracker imageTracker = TrackerManager.Instance.GetTracker<ImageTracker>();
+            IEnumerable<DataSet> datasets = imageTracker.GetDataSets();
+
+            IEnumerable<DataSet> activeDataSets = imageTracker.GetActiveDataSets();
+            List<DataSet> activeDataSetsToBeRemoved = activeDataSets.ToList();
+
+            //1. Loop through all the active datasets and deactivate them.
+            foreach (DataSet ads in activeDataSetsToBeRemoved) {
+                //Debug.Log(ads.Path + "is active.");
+                imageTracker.DeactivateDataSet(ads);
+            }
+
+            imageTracker.Stop();        
+
+            foreach (DataSet ds in datasets) {
+                Debug.Log(ds.Path);
+                if (ds.Path.Contains(datasetPath)) {
+                    imageTracker.ActivateDataSet(ds);
+                    Debug.Log("Found "+datasetPath+" dataset.");
+                }
+            }
+
+            imageTracker.Start();
+
+            /* DEBUG current active after swapping
+            activeDataSets = imageTracker.GetActiveDataSets();
+                
+            foreach (DataSet ads in activeDataSets) {
+                Debug.Log(ads.Path + "is active.");
+            }*/
+        }
+    }
 }
