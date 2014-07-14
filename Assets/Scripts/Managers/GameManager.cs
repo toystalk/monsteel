@@ -37,7 +37,8 @@ public class GameManager : Singleton<GameManager> {
         set {
             switch (value) {
                 case ToyState.Dracula:
-                    ActivateDataSet("Toystalk_MissMonster");
+                    //ActivateDataSet("Toystalk_MissMonster");
+                    ActivateDataSet("Toystalk_Dracula");
                     break;
                 case ToyState.Frank:
                     ActivateDataSet("Toystalk_Frank");
