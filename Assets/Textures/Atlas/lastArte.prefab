@@ -41,6 +41,19 @@ MonoBehaviour:
   material: {fileID: 2100000, guid: 27c9322a675deaf4ba90f1447b365c20, type: 2}
   mSprites:
   - name: bg_silhueta
+    x: 776
+    y: 1024
+    width: 640
+    height: 1024
+    borderLeft: 0
+    borderRight: 0
+    borderTop: 0
+    borderBottom: 0
+    paddingLeft: 0
+    paddingRight: 0
+    paddingTop: 0
+    paddingBottom: 0
+  - name: bg_silhueta_dracula
     x: 0
     y: 91
     width: 640
@@ -54,10 +67,10 @@ MonoBehaviour:
     paddingTop: 0
     paddingBottom: 0
   - name: drac_low
-    x: 776
-    y: 1496
-    width: 496
-    height: 552
+    x: 1424
+    y: 1498
+    width: 494
+    height: 550
     borderLeft: 0
     borderRight: 0
     borderTop: 0
@@ -80,8 +93,8 @@ MonoBehaviour:
     paddingTop: 43
     paddingBottom: 32
   - name: silhueta_behind_glow
-    x: 1280
-    y: 1505
+    x: 776
+    y: 473
     width: 413
     height: 543
     borderLeft: 0
@@ -93,8 +106,8 @@ MonoBehaviour:
     paddingTop: 371
     paddingBottom: 110
   - name: silhueta_line
-    x: 1701
-    y: 1600
+    x: 1424
+    y: 1042
     width: 318
     height: 448
     borderLeft: 0

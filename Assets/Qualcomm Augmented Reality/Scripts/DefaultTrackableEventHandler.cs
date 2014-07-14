@@ -85,8 +85,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 
         if (mTrackableBehaviour.TrackableName == "Toystalk_Dracula" || 
             mTrackableBehaviour.TrackableName == "Toystalk_Frank" || 
-            mTrackableBehaviour.TrackableName == "Toystalk_Caveman") {
-            ToyManager.instance.DraculaFoundCallback();
+            mTrackableBehaviour.TrackableName == "Toystalk_Caveman" ||
+            mTrackableBehaviour.TrackableName == "Toystalk_MissMonster") {
+            ToyManager.instance.ToyFoundCallback();
         }
     }
 
@@ -112,8 +113,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 
         if (mTrackableBehaviour.TrackableName == "Toystalk_Dracula" ||
             mTrackableBehaviour.TrackableName == "Toystalk_Frank" ||
-            mTrackableBehaviour.TrackableName == "Toystalk_Caveman") {
-            ToyManager.instance.DraculaLostCallback();
+            mTrackableBehaviour.TrackableName == "Toystalk_Caveman" ||
+            mTrackableBehaviour.TrackableName == "Toystalk_MissMonster") {
+            ToyManager.instance.ToyLostCallback();
         }
 
     }

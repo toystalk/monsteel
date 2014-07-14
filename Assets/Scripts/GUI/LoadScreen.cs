@@ -31,7 +31,6 @@ public class LoadScreen : MonoBehaviour {
 
     // Use this for initialization
     void Awake () {
-        DontDestroyOnLoad(transform.parent.transform.parent.gameObject);
         loadTween = gameObject.GetComponent<TweenPosition>();
     }
 
@@ -43,9 +42,9 @@ public class LoadScreen : MonoBehaviour {
     }
 
     public void CloseLoad () {
-        loadTween.PlayReverse();
+        loadTween.PlayForward();
         if (this.name == "LoadTop") {
-            AudioManager.playEffectAfter("Gatereverse", 0.01f);
+            AudioManager.playEffectAfter("Gatereverse", 0.5f);
         }
     }
 
