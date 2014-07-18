@@ -45,6 +45,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
                                     TrackableBehaviour.Status previousStatus,
                                     TrackableBehaviour.Status newStatus)
     {
+        Debug.Log("TrackableStateChanged");
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED ||
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
