@@ -286,6 +286,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 557373427}
   - 114: {fileID: 557373426}
+  - 114: {fileID: 557373428}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -320,6 +321,23 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!114 &557373428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 557373425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 225d1b2605bafeb47a4cf6d9956ad356, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  appID: 0ba309c7dcd0eeaf4f8e3af876358ff6
+  packageID: com.toystalk.monsteelalpha
+  serverURL: https://rink.hockeyapp.net/
+  exceptionLogging: 1
+  autoUpload: 0
+  updateManager: 1
 --- !u!1 &987344995
 GameObject:
   m_ObjectHideFlags: 0
