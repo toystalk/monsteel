@@ -11,7 +11,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: Toys Talk
-  productName: Monsteel Alpha
+  productName: Monsteel Beta
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   defaultScreenWidth: 1024
@@ -73,11 +73,11 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.toystalk.monsteelalpha
+  iPhoneBundleIdentifier: com.toystalk.monsteelbeta
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 45b766513c668794a92e0d2144cad5bf
-  iPhoneBundleVersion: 0.1a
+  iPhoneBundleVersion: 0.1b
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
