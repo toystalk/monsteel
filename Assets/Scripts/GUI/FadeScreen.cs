@@ -4,7 +4,7 @@ using System.Collections;
 public class FadeScreen : MonoBehaviour {
 
     string currentScene;
-    string nextScene;
+//    string nextScene;
     bool waitForScene;
     TweenAlpha fadeTween;
 
@@ -22,11 +22,11 @@ public class FadeScreen : MonoBehaviour {
     public void FadeScene () {
         switch (currentScene) {
             case "Splash":
-                nextScene = "Start";
+                //nextScene = "Start";
                 StartCoroutine("FadeStart");
                 break;
             case "Start":
-                nextScene = "Start";
+                //nextScene = "Start";
                 StartCoroutine("FadeAR1");
                 break;
             default:
