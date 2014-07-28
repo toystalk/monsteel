@@ -106,6 +106,9 @@ public class GUIManager : Singleton<GUIManager> {
         switch (button) {
 			case "buttonName":
 				break;
+            case "BatSmoke":
+                GameObject.Find("Layer2").GetComponent<Animator>().SetTrigger("SmokeTrigger");
+                break;
             case "DraculaButton":
                 FindObjectOfType<TweenAlpha>().PlayReverse();
                 GameManager.instance.currentToy = GameManager.ToyState.Dracula;
