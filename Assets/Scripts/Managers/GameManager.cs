@@ -37,9 +37,11 @@ namespace Assets.Scripts.Core {
 
         void initDebug () {
             debugInput = (ChatInput)FindObjectOfType(typeof(ChatInput));
-            DontDestroyOnLoad(GUIManager.instance.GetUI("DebugUI").gameObject);
-            SetDebug = true;
-            DebuggerEnabled();
+            if (debugInput) {
+                DontDestroyOnLoad(GUIManager.instance.GetUI("DebugUI").gameObject);
+                SetDebug = true;
+                DebuggerEnabled();
+            }
         }
 
         public static void Debugger (UnityEngine.Object log) {
