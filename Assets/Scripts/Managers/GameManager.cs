@@ -150,6 +150,13 @@ namespace Assets.Scripts.Core {
             OnManagersInitialized("Vuforia");
         }
 
+        void initComicManager () {
+            ComicManager.instance.OnComicStart();
+            ComicManager.makeChildOf(gameObject);
+
+            OnManagersInitialized("Comic");
+        }
+
         // Starts the game updating a current state to begin
         void StartGame() {
             currentScene = Application.loadedLevelName;
@@ -214,17 +221,15 @@ namespace Assets.Scripts.Core {
              * ==================================================
              * Current States :
              * 
-             * Home : home screen
-             * Lab : lab island menu
-             * Potion : choose potion to be made
-             * Remove : remove all ingredients from the cauldron
-             * Removed : cauldron sent signal due to all ingredients removal
-             * InsertIgr : insert an ingredient in the cauldron
-             * PotionReady : potion is ready to start RA
-             * 
+             * Intro
+             * Comic
+             * Testimonial
+             * MiniGame
              */
             switch (currentState.GetName()) {
-                case "Potion":
+                case "Intro":
+                    initComicManager();
+                    StartCoroutine(LoadAfterSecs(GameStateHandler.Comic, 5.0f));
                     break;
                 default:
                     break;
@@ -250,7 +255,9 @@ namespace Assets.Scripts.Core {
              * MiniGame
              */
             switch (currentState.GetName()) {
-                case "PotionLab":
+                case "Intro":
+                    break;
+                case "Comic":
                     break;
                 default:
                     break;
@@ -261,6 +268,12 @@ namespace Assets.Scripts.Core {
         
         #endregion
 
+        IEnumerator LoadAfterSecs (GameStateHandler nextState, float delaySecs) {
+            yield return new WaitForSeconds(delaySecs);
+            Transition.StartFade("In");
+            updateState(nextState);
+        }
+
         // Routine responsible for loading a level async, updating UI content after.
         IEnumerator load(string levelToLoad) {
             GameManager.Debugger("LOADING : " + levelToLoad);
@@ -270,7 +283,7 @@ namespace Assets.Scripts.Core {
                 yield return new WaitForSeconds(1.0f);
             } while (async.isDone);
 
-            while(Transition.playing){
+            while(Transition.instance.Playing){
                 yield return new WaitForSeconds(1.0f);
             }
 

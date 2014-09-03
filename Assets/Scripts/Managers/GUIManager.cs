@@ -24,7 +24,7 @@ namespace Assets.Scripts.Core {
         //public List<UIContent> guiContents; // List of interface contents
         public Dictionary<string,UIContent> UIContents; //Dictionary of all UIContent
         public Dictionary<string, Sprite> UIEntities; //Dicitionary of unity Sprites (for specific animations)
-        
+                
         // Initializes content lists searching for any objects assigned with given tags
         // and deactivating them right after. (If they are already disabled, they can't be found)
         // Doesn't deactivate labels since they are already inside some content
@@ -47,6 +47,14 @@ namespace Assets.Scripts.Core {
             myMethod.Invoke(this,null);
         }
 
+        public void PageRightButtonClick () {
+            ComicManager.instance.OnPageNext();
+        }
+
+        public void PageLeftButtonClick () {
+            ComicManager.instance.OnPagePrevious();
+        }
+
         public void DebugButtonClick () {
             GameManager.DebuggerEnabled();
         }
@@ -59,24 +67,27 @@ namespace Assets.Scripts.Core {
             // Start make potion flow callback
         }
 
+        
+
         // Use to update GUI objects when entering new states
         public void OnUpdateStateUI (string myState) {
             /*
             * ==================================================
             * Current state names defined@GameManager prefab (5)
             * ==================================================
-            * Home : home screen
-            * Lab : lab island menu
-            * Potion : choose potion to be made
-            * Remove : remove all ingredients from the cauldron
-            * Removed : all ingredientes have been removed from the cauldron
-            * InsertIgr : insert an ingredient in the cauldron
-            * PotionReady : potion is finished.
+            * Intro
+            * Comic
+            * Testimonial
+            * MiniGame
+             * 
             */
             GameManager.Debugger("Updating UI for " + myState + " state.");
 
             switch (myState) {
-                case "Home":
+                case "Intro":
+                    break;
+                case "Comic":
+                    ComicManager.instance.OnPageLoad();
                     break;
                 default:
                     break;
