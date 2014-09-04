@@ -6,29 +6,33 @@ namespace Assets.Scripts.Core{
 
     public class ComicManager : Singleton<ComicManager> {
 
+        const int THUMBMAX = 11; //maximum number of thumbnails for comic pages
+        int viewCenter;
         List<GameObject> ComicPages;
-        UIScrollBar ScrollFocus { get; set; }
-        float ScrollOffset = 0.153f;
+        List<ScrollContent> ComicThumbs;
 
         public int ActivePage { get; set; } //Current page of the comic
         public int FirstPage { get; set; }
         public int LastPage { get; set; }
-
+        
         public void OnComicStart(){
             ActivePage = 0;
+            viewCenter = THUMBMAX / 2;
             ComicPages = new List<GameObject>();
+            ComicThumbs = new List<ScrollContent>();
         }        
                 
         public void OnPageLoad () {
             foreach (Transform child in GUIManager.instance.GetUI("PageRoot").transform) {
                 ComicPages.Add(child.gameObject);
             }
+            foreach (Transform child in GUIManager.instance.GetUI("ScrollGrid").transform) {
+                ComicThumbs.Add(child.GetComponent<ScrollContent>());
+            }
 
-            ComicPages[ActivePage].SetActive(true);
-            ScrollFocus = FindObjectOfType<UIScrollBar>();
-            FocusPage(ActivePage);
             FirstPage = 0;
             LastPage = ComicPages.Count-1;
+            PageActiveAll();
         }
 
         public void OnPageNext () {
@@ -36,7 +40,7 @@ namespace Assets.Scripts.Core{
                 ComicPages[ActivePage].SetActive(false);
                 ActivePage++;
                 ComicPages[ActivePage].SetActive(true);
-                FocusPage(ActivePage);
+                ThumbActiveNext();
             }
         }
 
@@ -45,12 +49,47 @@ namespace Assets.Scripts.Core{
                 ComicPages[ActivePage].SetActive(false);
                 ActivePage--;
                 ComicPages[ActivePage].SetActive(true);
-                FocusPage(ActivePage);
+                ThumbActivePrevious();
             }
         }
 
-        void FocusPage (int page) {
-            ScrollFocus.value = ScrollOffset * page;
+        void ThumbActiveNext () {
+            ComicThumbs[ActivePage-1].PlayResizeReverse();
+            ComicThumbs[ActivePage].PlayResizeForward();
+            ComicThumbs[ActivePage + 1].PlayAlphaForward();
+
+            if (ActivePage % THUMBMAX == 0 && ActivePage > 0) {
+                viewCenter += THUMBMAX;
+                UpdateView();
+            }
+        }
+
+        void ThumbActivePrevious () {
+            ComicThumbs[ActivePage].PlayResizeForward();
+            ComicThumbs[ActivePage + 1].PlayResizeReverse();
+
+            if (ActivePage % THUMBMAX == 0 && ActivePage > 0) {
+                viewCenter -= THUMBMAX;
+                UpdateView();
+            }
+        }
+
+
+        void PageActiveAll () {
+            ComicPages[ActivePage].SetActive(true);
+            ComicThumbs[ActivePage].PlayAlphaForward();
+            ComicThumbs[ActivePage+1].PlayAlphaForward();
+            ComicThumbs[ActivePage].PlayResizeForward();
+
+            for (int i=0; i<ActivePage; i++){
+                ComicThumbs[i].PlayAlphaForward();
+            }
+
+            UpdateView();
+        }
+
+        void UpdateView () {
+            ComicThumbs[viewCenter].CenterView();
         }
     }
 }

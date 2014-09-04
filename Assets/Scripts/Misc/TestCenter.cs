@@ -13,7 +13,7 @@ public class TestCenter : MonoBehaviour {
 	void Update () {
         if (Input.GetKeyDown(KeyCode.A)) {
             Debug.Log("Centering");
-            FindObjectOfType<UICenterOnChild>().CenterOn(GameObject.Find("IconPage2").transform);
+            FindObjectOfType<UICenterOnChild>().CenterOn(GameObject.Find("IconPage3").transform);
         }
 	}
 }
