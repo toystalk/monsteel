@@ -108,4 +108,10 @@ public class UIContent : MonoBehaviour {
     public void OnDisable () {
         //GameManager.Debugger("Object " + myName + " disabled.");
     }
+
+    public void ChildActiveAll (bool setActive) {
+        foreach (Transform t in transform) {
+            t.gameObject.SetActive(setActive);
+        }
+    }
 }
