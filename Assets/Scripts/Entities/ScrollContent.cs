@@ -1,9 +1,11 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts.Core;
 
 public class ScrollContent : UIContent {
 
     UICenterOnChild myCenterView;
+    int myScrollPos;
 
     public UI2DSprite mySpr; 
     
@@ -18,6 +20,7 @@ public class ScrollContent : UIContent {
 
     public override void initContent () {
         myName = this.gameObject.name;
+        myScrollPos = int.Parse(myName.Substring(myName.Length-2,2));
         myObj = this.gameObject;
         mySpr = GetComponent<UI2DSprite>();
         myColorTween = GetComponent<TweenColor>();
@@ -45,6 +48,11 @@ public class ScrollContent : UIContent {
 
     public override UI2DSprite Get2DSprite () {
         return mySpr;
+    }
+
+    public override void OnClick()
+    {
+        ComicManager.instance.PageActive(myScrollPos);
     }
 
     public void PlayAlphaForward () {

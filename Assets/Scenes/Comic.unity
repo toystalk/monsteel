@@ -85,11 +85,14 @@ GameObject:
   - 65: {fileID: 2427743}
   - 114: {fileID: 2427742}
   - 114: {fileID: 2427745}
-  - 114: {fileID: 2427744}
-  - 114: {fileID: 2427741}
   - 114: {fileID: 2427746}
   - 114: {fileID: 2427747}
   - 114: {fileID: 2427748}
+  - 114: {fileID: 2427744}
+  - 114: {fileID: 2427741}
+  - 114: {fileID: 2427751}
+  - 114: {fileID: 2427750}
+  - 114: {fileID: 2427749}
   m_Layer: 8
   m_Name: IconPage13
   m_TagString: Untagged
@@ -145,7 +148,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &2427742
@@ -209,7 +212,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &2427745
@@ -240,10 +243,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -361,6 +364,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &2427749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2427739}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &2427750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2427739}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &2427751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2427739}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &20944806
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,11 +784,14 @@ GameObject:
   - 65: {fileID: 141581488}
   - 114: {fileID: 141581487}
   - 114: {fileID: 141581490}
-  - 114: {fileID: 141581489}
-  - 114: {fileID: 141581486}
   - 114: {fileID: 141581491}
   - 114: {fileID: 141581492}
   - 114: {fileID: 141581493}
+  - 114: {fileID: 141581489}
+  - 114: {fileID: 141581486}
+  - 114: {fileID: 141581496}
+  - 114: {fileID: 141581495}
+  - 114: {fileID: 141581494}
   m_Layer: 8
   m_Name: IconPage08
   m_TagString: Untagged
@@ -725,7 +847,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &141581487
@@ -789,7 +911,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &141581490
@@ -820,10 +942,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -941,6 +1063,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &141581494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141581484}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &141581495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141581484}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &141581496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 141581484}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &172752445
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,11 +1190,14 @@ GameObject:
   - 65: {fileID: 172752449}
   - 114: {fileID: 172752448}
   - 114: {fileID: 172752451}
-  - 114: {fileID: 172752450}
-  - 114: {fileID: 172752447}
   - 114: {fileID: 172752452}
   - 114: {fileID: 172752453}
   - 114: {fileID: 172752454}
+  - 114: {fileID: 172752450}
+  - 114: {fileID: 172752447}
+  - 114: {fileID: 172752457}
+  - 114: {fileID: 172752456}
+  - 114: {fileID: 172752455}
   m_Layer: 8
   m_Name: IconPage16
   m_TagString: Untagged
@@ -1012,7 +1253,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &172752448
@@ -1076,7 +1317,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &172752451
@@ -1107,10 +1348,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1228,6 +1469,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &172752455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172752445}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &172752456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172752445}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &172752457
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 172752445}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &248177312
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,11 +1596,14 @@ GameObject:
   - 65: {fileID: 248177316}
   - 114: {fileID: 248177315}
   - 114: {fileID: 248177318}
-  - 114: {fileID: 248177317}
-  - 114: {fileID: 248177314}
   - 114: {fileID: 248177319}
   - 114: {fileID: 248177320}
   - 114: {fileID: 248177321}
+  - 114: {fileID: 248177317}
+  - 114: {fileID: 248177314}
+  - 114: {fileID: 248177324}
+  - 114: {fileID: 248177323}
+  - 114: {fileID: 248177322}
   m_Layer: 8
   m_Name: IconPage12
   m_TagString: Untagged
@@ -1299,7 +1659,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &248177315
@@ -1363,7 +1723,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &248177318
@@ -1394,10 +1754,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1515,6 +1875,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &248177322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248177312}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &248177323
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248177312}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &248177324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 248177312}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &368165436
 GameObject:
   m_ObjectHideFlags: 0
@@ -1622,11 +2098,14 @@ GameObject:
   - 65: {fileID: 406715585}
   - 114: {fileID: 406715584}
   - 114: {fileID: 406715587}
-  - 114: {fileID: 406715586}
-  - 114: {fileID: 406715583}
   - 114: {fileID: 406715588}
   - 114: {fileID: 406715589}
   - 114: {fileID: 406715590}
+  - 114: {fileID: 406715586}
+  - 114: {fileID: 406715583}
+  - 114: {fileID: 406715593}
+  - 114: {fileID: 406715592}
+  - 114: {fileID: 406715591}
   m_Layer: 8
   m_Name: IconPage03
   m_TagString: Untagged
@@ -1682,7 +2161,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &406715584
@@ -1746,7 +2225,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &406715587
@@ -1777,10 +2256,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -1898,6 +2377,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &406715591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406715581}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &406715592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406715581}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &406715593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 406715581}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &452221626
 GameObject:
   m_ObjectHideFlags: 0
@@ -1989,11 +2584,14 @@ GameObject:
   - 65: {fileID: 653457328}
   - 114: {fileID: 653457327}
   - 114: {fileID: 653457330}
-  - 114: {fileID: 653457329}
-  - 114: {fileID: 653457326}
   - 114: {fileID: 653457331}
   - 114: {fileID: 653457332}
   - 114: {fileID: 653457333}
+  - 114: {fileID: 653457329}
+  - 114: {fileID: 653457326}
+  - 114: {fileID: 653457336}
+  - 114: {fileID: 653457335}
+  - 114: {fileID: 653457334}
   m_Layer: 8
   m_Name: IconPage04
   m_TagString: Untagged
@@ -2049,7 +2647,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &653457327
@@ -2113,7 +2711,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &653457330
@@ -2144,10 +2742,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -2265,6 +2863,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &653457334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653457324}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &653457335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653457324}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &653457336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 653457324}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &790385823
 GameObject:
   m_ObjectHideFlags: 0
@@ -2290,7 +3004,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 790385823}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -207.000107, y: -353, z: 0}
+  m_LocalPosition: {x: -207.000107, y: -353.920013, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1069549813}
@@ -2857,11 +3571,14 @@ GameObject:
   - 65: {fileID: 1043613180}
   - 114: {fileID: 1043613179}
   - 114: {fileID: 1043613182}
-  - 114: {fileID: 1043613181}
-  - 114: {fileID: 1043613178}
   - 114: {fileID: 1043613183}
   - 114: {fileID: 1043613184}
   - 114: {fileID: 1043613185}
+  - 114: {fileID: 1043613181}
+  - 114: {fileID: 1043613178}
+  - 114: {fileID: 1043613188}
+  - 114: {fileID: 1043613187}
+  - 114: {fileID: 1043613186}
   m_Layer: 8
   m_Name: IconPage07
   m_TagString: Untagged
@@ -2917,7 +3634,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1043613179
@@ -2981,7 +3698,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1043613182
@@ -3012,10 +3729,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -3133,6 +3850,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &1043613186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043613176}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1043613187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043613176}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1043613188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043613176}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1051211200
 GameObject:
   m_ObjectHideFlags: 0
@@ -3144,11 +3977,14 @@ GameObject:
   - 65: {fileID: 1051211204}
   - 114: {fileID: 1051211203}
   - 114: {fileID: 1051211206}
-  - 114: {fileID: 1051211205}
-  - 114: {fileID: 1051211202}
   - 114: {fileID: 1051211207}
   - 114: {fileID: 1051211208}
   - 114: {fileID: 1051211209}
+  - 114: {fileID: 1051211205}
+  - 114: {fileID: 1051211202}
+  - 114: {fileID: 1051211212}
+  - 114: {fileID: 1051211211}
+  - 114: {fileID: 1051211210}
   m_Layer: 8
   m_Name: IconPage11
   m_TagString: Untagged
@@ -3204,7 +4040,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1051211203
@@ -3268,7 +4104,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1051211206
@@ -3299,10 +4135,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -3420,6 +4256,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &1051211210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051211200}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1051211211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051211200}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1051211212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051211200}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1069549812
 GameObject:
   m_ObjectHideFlags: 0
@@ -3528,11 +4480,14 @@ GameObject:
   - 65: {fileID: 1082383715}
   - 114: {fileID: 1082383714}
   - 114: {fileID: 1082383717}
-  - 114: {fileID: 1082383716}
-  - 114: {fileID: 1082383713}
   - 114: {fileID: 1082383718}
   - 114: {fileID: 1082383719}
   - 114: {fileID: 1082383720}
+  - 114: {fileID: 1082383716}
+  - 114: {fileID: 1082383713}
+  - 114: {fileID: 1082383723}
+  - 114: {fileID: 1082383722}
+  - 114: {fileID: 1082383721}
   m_Layer: 8
   m_Name: IconPage09
   m_TagString: Untagged
@@ -3588,7 +4543,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1082383714
@@ -3652,7 +4607,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1082383717
@@ -3683,10 +4638,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -3804,6 +4759,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &1082383721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1082383711}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1082383722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1082383711}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1082383723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1082383711}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1149718090
 GameObject:
   m_ObjectHideFlags: 0
@@ -4399,11 +5470,14 @@ GameObject:
   - 65: {fileID: 1335403008}
   - 114: {fileID: 1335403007}
   - 114: {fileID: 1335403010}
-  - 114: {fileID: 1335403009}
-  - 114: {fileID: 1335403006}
   - 114: {fileID: 1335403011}
   - 114: {fileID: 1335403012}
   - 114: {fileID: 1335403013}
+  - 114: {fileID: 1335403009}
+  - 114: {fileID: 1335403006}
+  - 114: {fileID: 1335403016}
+  - 114: {fileID: 1335403015}
+  - 114: {fileID: 1335403014}
   m_Layer: 8
   m_Name: IconPage05
   m_TagString: Untagged
@@ -4459,7 +5533,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1335403007
@@ -4523,7 +5597,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1335403010
@@ -4554,10 +5628,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -4675,6 +5749,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &1335403014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335403004}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1335403015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335403004}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1335403016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335403004}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1346685973
 GameObject:
   m_ObjectHideFlags: 0
@@ -4774,11 +5964,11 @@ GameObject:
   - 65: {fileID: 1437595839}
   - 114: {fileID: 1437595838}
   - 114: {fileID: 1437595841}
-  - 114: {fileID: 1437595840}
-  - 114: {fileID: 1437595837}
   - 114: {fileID: 1437595842}
   - 114: {fileID: 1437595843}
   - 114: {fileID: 1437595844}
+  - 114: {fileID: 1437595840}
+  - 114: {fileID: 1437595837}
   m_Layer: 8
   m_Name: IconPage01
   m_TagString: Untagged
@@ -4828,13 +6018,13 @@ MonoBehaviour:
     m_PostInfinity: 2
   ignoreTimeScale: 1
   delay: 0
-  duration: 1
+  duration: .5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1437595838
@@ -4892,13 +6082,13 @@ MonoBehaviour:
     m_PostInfinity: 2
   ignoreTimeScale: 1
   delay: 0
-  duration: 1
+  duration: .5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1437595841
@@ -4929,10 +6119,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -4983,7 +6173,7 @@ MonoBehaviour:
     m_PostInfinity: 2
   ignoreTimeScale: 1
   delay: 0
-  duration: 1
+  duration: .5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
@@ -5141,11 +6331,14 @@ GameObject:
   - 65: {fileID: 1496553495}
   - 114: {fileID: 1496553494}
   - 114: {fileID: 1496553497}
-  - 114: {fileID: 1496553496}
-  - 114: {fileID: 1496553493}
   - 114: {fileID: 1496553498}
   - 114: {fileID: 1496553499}
   - 114: {fileID: 1496553500}
+  - 114: {fileID: 1496553496}
+  - 114: {fileID: 1496553493}
+  - 114: {fileID: 1496553503}
+  - 114: {fileID: 1496553502}
+  - 114: {fileID: 1496553501}
   m_Layer: 8
   m_Name: IconPage14
   m_TagString: Untagged
@@ -5201,7 +6394,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1496553494
@@ -5265,7 +6458,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1496553497
@@ -5296,10 +6489,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -5417,6 +6610,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &1496553501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1496553491}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1496553502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1496553491}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1496553503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1496553491}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1504530060
 GameObject:
   m_ObjectHideFlags: 0
@@ -5428,11 +6737,14 @@ GameObject:
   - 65: {fileID: 1504530064}
   - 114: {fileID: 1504530063}
   - 114: {fileID: 1504530066}
-  - 114: {fileID: 1504530065}
-  - 114: {fileID: 1504530062}
   - 114: {fileID: 1504530067}
   - 114: {fileID: 1504530068}
   - 114: {fileID: 1504530069}
+  - 114: {fileID: 1504530065}
+  - 114: {fileID: 1504530062}
+  - 114: {fileID: 1504530072}
+  - 114: {fileID: 1504530071}
+  - 114: {fileID: 1504530070}
   m_Layer: 8
   m_Name: IconPage15
   m_TagString: Untagged
@@ -5488,7 +6800,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1504530063
@@ -5552,7 +6864,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1504530066
@@ -5583,10 +6895,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -5704,6 +7016,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &1504530070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504530060}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1504530071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504530060}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1504530072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1504530060}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1601894892
 GameObject:
   m_ObjectHideFlags: 0
@@ -5849,13 +7277,13 @@ MonoBehaviour:
     m_PostInfinity: 2
   ignoreTimeScale: 1
   delay: 0
-  duration: 1
+  duration: .5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1604919872
@@ -5911,10 +7339,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -5965,13 +7393,13 @@ MonoBehaviour:
     m_PostInfinity: 2
   ignoreTimeScale: 1
   delay: 0
-  duration: 1
+  duration: .5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1604919876
@@ -6350,11 +7778,14 @@ GameObject:
   - 65: {fileID: 1691896980}
   - 114: {fileID: 1691896979}
   - 114: {fileID: 1691896982}
-  - 114: {fileID: 1691896981}
-  - 114: {fileID: 1691896978}
   - 114: {fileID: 1691896983}
   - 114: {fileID: 1691896984}
   - 114: {fileID: 1691896985}
+  - 114: {fileID: 1691896981}
+  - 114: {fileID: 1691896978}
+  - 114: {fileID: 1691896988}
+  - 114: {fileID: 1691896987}
+  - 114: {fileID: 1691896986}
   m_Layer: 8
   m_Name: IconPage10
   m_TagString: Untagged
@@ -6410,7 +7841,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1691896979
@@ -6474,7 +7905,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1691896982
@@ -6505,10 +7936,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -6626,6 +8057,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &1691896986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1691896976}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1691896987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1691896976}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1691896988
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1691896976}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1722109436
 GameObject:
   m_ObjectHideFlags: 0
@@ -6717,11 +8264,11 @@ GameObject:
   - 65: {fileID: 1731310034}
   - 114: {fileID: 1731310033}
   - 114: {fileID: 1731310036}
-  - 114: {fileID: 1731310035}
-  - 114: {fileID: 1731310032}
-  - 114: {fileID: 1731310037}
   - 114: {fileID: 1731310038}
   - 114: {fileID: 1731310039}
+  - 114: {fileID: 1731310037}
+  - 114: {fileID: 1731310035}
+  - 114: {fileID: 1731310032}
   m_Layer: 8
   m_Name: IconPage02
   m_TagString: Untagged
@@ -6771,13 +8318,13 @@ MonoBehaviour:
     m_PostInfinity: 2
   ignoreTimeScale: 1
   delay: 0
-  duration: 1
+  duration: .5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1731310033
@@ -6835,13 +8382,13 @@ MonoBehaviour:
     m_PostInfinity: 2
   ignoreTimeScale: 1
   delay: 0
-  duration: 1
+  duration: .5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1731310036
@@ -6872,10 +8419,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -6926,7 +8473,7 @@ MonoBehaviour:
     m_PostInfinity: 2
   ignoreTimeScale: 1
   delay: 0
-  duration: 1
+  duration: .5
   steeperCurves: 0
   tweenGroup: 0
   onFinished: []
@@ -7107,11 +8654,14 @@ GameObject:
   - 65: {fileID: 1779642785}
   - 114: {fileID: 1779642784}
   - 114: {fileID: 1779642787}
-  - 114: {fileID: 1779642786}
-  - 114: {fileID: 1779642783}
   - 114: {fileID: 1779642788}
   - 114: {fileID: 1779642789}
   - 114: {fileID: 1779642790}
+  - 114: {fileID: 1779642786}
+  - 114: {fileID: 1779642783}
+  - 114: {fileID: 1779642793}
+  - 114: {fileID: 1779642792}
+  - 114: {fileID: 1779642791}
   m_Layer: 8
   m_Name: IconPage06
   m_TagString: Untagged
@@ -7167,7 +8717,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1779642784
@@ -7231,7 +8781,7 @@ MonoBehaviour:
   onFinished: []
   eventReceiver: {fileID: 0}
   callWhenFinished: 
-  from: 30
+  from: 50
   to: 60
   updateTable: 0
 --- !u!114 &1779642787
@@ -7262,10 +8812,10 @@ MonoBehaviour:
     relative: 1
     absolute: 0
   updateAnchors: 1
-  mColor: {r: .29411763, g: .29411763, b: .29411763, a: .0352941193}
+  mColor: {r: .29411763, g: .29411763, b: .29411763, a: 0}
   mPivot: 4
-  mWidth: 30
-  mHeight: 30
+  mWidth: 50
+  mHeight: 50
   mDepth: 16
   autoResizeBoxCollider: 0
   hideIfOffScreen: 0
@@ -7383,6 +8933,122 @@ MonoBehaviour:
   myAlphaTween: {fileID: 0}
   myHeightTween: {fileID: 0}
   myWidthTween: {fileID: 0}
+--- !u!114 &1779642791
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779642781}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66a6ab21c5f860946ade65b47cc0270b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1779642792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779642781}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fe5d396737f89f4ea1534bc147cad2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: 50
+  to: 60
+  updateTable: 0
+--- !u!114 &1779642793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1779642781}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfa4a4a103e4fed43a7e9e9df4a6915c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  method: 0
+  style: 0
+  animationCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 1
+      tangentMode: 0
+    - time: 1
+      value: 1
+      inSlope: 1
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  ignoreTimeScale: 1
+  delay: 0
+  duration: .5
+  steeperCurves: 0
+  tweenGroup: 0
+  onFinished: []
+  eventReceiver: {fileID: 0}
+  callWhenFinished: 
+  from: {r: .29411763, g: .29411763, b: .29411763, a: 1}
+  to: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1792192893
 GameObject:
   m_ObjectHideFlags: 0

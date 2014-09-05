@@ -56,7 +56,7 @@ public class UIContent : MonoBehaviour {
         }
     }
 
-    public void OnClick () {
+    public virtual void OnClick () {
         // Call guimanager to handle button click
         GUIManager.instance.ButtonCallback (myName);
     }

@@ -68,12 +68,21 @@ namespace Assets.Scripts.Core{
             ComicThumbs[ActivePage].PlayResizeForward();
             ComicThumbs[ActivePage + 1].PlayResizeReverse();
 
-            if (ActivePage % THUMBMAX == 0 && ActivePage > 0) {
+            if ((ActivePage+1) % THUMBMAX == 0 && ActivePage > 0) {
                 viewCenter -= THUMBMAX;
                 UpdateView();
             }
         }
 
+        public void PageActive (int pageNum) {
+            ComicPages[ActivePage].SetActive(false);
+            ComicThumbs[ActivePage].PlayResizeReverse();
+            ActivePage = pageNum;
+
+            ComicPages[ActivePage].SetActive(true);
+            ComicThumbs[ActivePage].PlayResizeForward();
+            ComicThumbs[ActivePage + 1].PlayAlphaForward();
+        }
 
         void PageActiveAll () {
             ComicPages[ActivePage].SetActive(true);
