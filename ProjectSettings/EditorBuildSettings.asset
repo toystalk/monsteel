@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniGame.unity
   - enabled: 1
     path: Assets/Scenes/Testimonial.unity
+  - enabled: 1
+    path: Assets/Scenes/Depoimento.unity

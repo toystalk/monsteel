@@ -46,6 +46,9 @@ namespace Assets.Scripts.Core {
             MethodInfo myMethod = this.GetType().GetMethod(methodName);
             myMethod.Invoke(this,null);
         }
+        public void FrankDepoimentoClick () {
+            Application.LoadLevel("Depoimento");
+        }
 
         public void PageRightButtonClick () {
             ComicManager.instance.OnPageNext();
