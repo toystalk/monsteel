@@ -46,6 +46,17 @@ namespace Assets.Scripts.Core {
             MethodInfo myMethod = this.GetType().GetMethod(methodName);
             myMethod.Invoke(this,null);
         }
+
+        public void SmokeButtonClick () {
+            GameObject.Find("SmokeFX").GetComponent<ParticleSystem>().Stop();
+            GetUI("Q2_morcego").GetAlphaTweener().PlayForward();
+            GetUI("Q2_morcego").GetPositionTweener().PlayForward();
+            GetUI("Q2_morcego").GetScaleTweener().PlayForward();
+            GetUI("Q2_puf").GetAlphaTweener().PlayForward();
+            GetUI("Q2_fumaca").GetAlphaTweener().PlayForward();
+            GetUI("Q2_balao").GetAlphaTweener().PlayForward();
+        }
+
         public void FrankDepoimentoClick () {
             Application.LoadLevel("Depoimento");
         }

@@ -7,7 +7,7 @@ public class PageContent : MonoBehaviour {
 
 	void OnEnable () {
         childActive = true;
-        Invoke("ChildActiveAll", 3.0f);    
+        //Invoke("ChildActiveAll", 3.0f);    
 	}
 
     void OnDisable () {

@@ -101,6 +101,14 @@ public class UIContent : MonoBehaviour {
         return GetComponent<TweenWidth>();
     }
 
+    public virtual TweenPosition GetPositionTweener () {
+        return GetComponent<TweenPosition>();
+    }
+
+    public virtual TweenScale GetScaleTweener () {
+        return GetComponent<TweenScale>();
+    }
+
     public void OnEnable () {
         //GameManager.Debugger("Object " + myName + " enabled.");
     }
