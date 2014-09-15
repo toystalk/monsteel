@@ -1,7 +1,7 @@
 /*==============================================================================
-Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
+Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -17,8 +17,4 @@ using UnityEngine;
 [RequireComponent(typeof(Camera))]
 public class QCARBehaviour : QCARAbstractBehaviour
 {
-    QCARBehaviour()
-    {
-        mAndroidUnityPlayer = new AndroidUnityPlayer();
-    }
 }

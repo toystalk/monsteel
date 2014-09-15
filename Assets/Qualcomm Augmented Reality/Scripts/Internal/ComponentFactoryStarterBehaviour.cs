@@ -1,5 +1,5 @@
 ﻿/*==============================================================================
-Copyright (c) 2013-2014 Qualcomm Connected Experiences, Inc.
+Copyright (c) 2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
 Qualcomm Confidential and Proprietary
 ==============================================================================*/

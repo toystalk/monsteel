@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
-Copyright (c) 2013-2014 Qualcomm Connected Experiences, Inc.
+Copyright (c) 2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System.Collections.Generic;

@@ -1,7 +1,7 @@
 /*==============================================================================
-            Copyright (c) 2012-2014 Qualcomm Connected Experiences, Inc.
+            Copyright (c) 2012-2013 Qualcomm Austria Research Center GmbH.
             All Rights Reserved.
-            Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
+            Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;

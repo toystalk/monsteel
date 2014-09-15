@@ -27,7 +27,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -42,30 +41,30 @@ MonoBehaviour:
   currentState:
     myStateName: 
     myScene: 
-    myState: 0
+    myState: 1
     Next: 
     Prev: 
   savedState: 0
   myStates:
   - myStateName: Intro
     myScene: Intro
-    myState: 0
-    Next: 01000000
+    myState: 1
+    Next: 02000000
     Prev: 
   - myStateName: Comic
     myScene: Comic
-    myState: 1
-    Next: 0200000003000000
+    myState: 2
+    Next: 0300000004000000
     Prev: 00000000
   - myStateName: Testimonial
     myScene: Testimonial
-    myState: 2
-    Next: 01000000
+    myState: 3
+    Next: 02000000
     Prev: 01000000
   - myStateName: MiniGame
     myScene: MiniGame
-    myState: 3
-    Next: 01000000
+    myState: 4
+    Next: 02000000
     Prev: 01000000
   currentScene: 
   stateChanged: 0

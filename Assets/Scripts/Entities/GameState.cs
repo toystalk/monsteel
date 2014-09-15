@@ -17,6 +17,7 @@ namespace Assets.Scripts.Core {
         * Current state names defined@GameManager prefab 
         * ==============================================
         * 
+        * Loader 
         * Intro
         * Comic
         * Testimonial

@@ -1,6 +1,6 @@
-//Copyright (c) 2013-2014 Qualcomm Connected Experiences, Inc.
+//Copyright (c) 2013 Qualcomm Austria Research Center GmbH.
 //All Rights Reserved.
-//Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
+//Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 Shader "Custom/Text3D" {
     Properties {
         _MainTex ("Base (RGB)", 2D) = "white" {}

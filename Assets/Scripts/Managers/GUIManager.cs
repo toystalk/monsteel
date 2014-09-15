@@ -57,8 +57,17 @@ namespace Assets.Scripts.Core {
             GetUI("Q2_balao").GetAlphaTweener().PlayForward();
         }
 
+        public void StartButtonClick () {
+            GetUI("StartScreen").GetAlphaTweener().PlayForward();
+            ComicManager.instance.StartPages();
+        }
+
+        public void BackButtonClick () {
+            GameManager.SetState(GameStateHandler.Comic);
+        }
+
         public void FrankDepoimentoClick () {
-            Application.LoadLevel("Depoimento");
+            GameManager.SetState(GameStateHandler.Testimonial);
         }
 
         public void PageRightButtonClick () {

@@ -5,6 +5,7 @@ Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
 ==============================================================================*/
 
 using UnityEngine;
+using Assets.Scripts.Core;
 
 /// <summary>
 /// A custom handler that implements the ITrackableEventHandler interface.
@@ -71,7 +72,15 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         foreach (Collider component in colliderComponents) {
             component.enabled = true;
         }
-        FindObjectOfType<ControlFrankHead>().InitFrank();
+
+        try {
+            FindObjectOfType<ControlFrankHead>().InitFrank();
+            GUIManager.instance.GetUI("UIMask").display = false;
+        }
+        catch(System.Exception error) {
+            Debug.Log("Object not found, or tracking was just initiliazed. " + error.Message);
+        }
+
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
     }
 
@@ -89,7 +98,16 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         foreach (Collider component in colliderComponents) {
             component.enabled = false;
         }
-        FindObjectOfType<ControlFrankHead>().StopFrank();
+
+
+        try {
+            FindObjectOfType<ControlFrankHead>().StopFrank();
+            GUIManager.instance.GetUI("UIMask").display = true;
+        }
+        catch (System.Exception error) {
+            Debug.Log("Object not found, or tracking was just initiliazed. " + error.Message);
+        }
+
         Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
     }
 

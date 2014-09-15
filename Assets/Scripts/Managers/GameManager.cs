@@ -21,6 +21,7 @@ using System;
 namespace Assets.Scripts.Core {
     // Game states, divided by every different moment of the game
     public enum GameStateHandler {
+        Loader,
         Intro,
         Comic,
         Testimonial,
@@ -231,6 +232,8 @@ namespace Assets.Scripts.Core {
                     initComicManager();
                     StartCoroutine(LoadAfterSecs(GameStateHandler.Comic, 5.0f));
                     break;
+                case "Testimonial":
+                    break;
                 default:
                     break;
             }
@@ -245,8 +248,8 @@ namespace Assets.Scripts.Core {
             GUIManager.instance.initContents();
 
             /*
-             * Use to instantiate new managers
-             * ===============================
+             * Use to do stuff exclusively when the state's scene loads
+             * ========================================================
              * Current States :
              * 
              * Intro
@@ -257,7 +260,13 @@ namespace Assets.Scripts.Core {
             switch (currentState.GetName()) {
                 case "Intro":
                     break;
-                case "Comic":
+                case "Comic": 
+                    GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayForward();
+                    GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayForward();
+                    break;
+                case "Testimonial":                    
+                    GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayForward();
+                    GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayForward();
                     break;
                 default:
                     break;
@@ -270,22 +279,34 @@ namespace Assets.Scripts.Core {
 
         IEnumerator LoadAfterSecs (GameStateHandler nextState, float delaySecs) {
             yield return new WaitForSeconds(delaySecs);
-            Transition.StartFade("In");
+            //Transition.StartFade("In");
             updateState(nextState);
         }
 
         // Routine responsible for loading a level async, updating UI content after.
         IEnumerator load(string levelToLoad) {
             GameManager.Debugger("LOADING : " + levelToLoad);
+
+            GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayReverse();
+            GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().ResetToBeginning();
+            GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayReverse();
+            GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().ResetToBeginning();
+
+            yield return new WaitForSeconds(2.0f);
+
+            //(changed load level async to additive async while testing new load)
             AsyncOperation async = Application.LoadLevelAsync(levelToLoad);
             async.allowSceneActivation = false;
             do {
+                //GUIManager.GetUI("Loading").Get2DSprite.fillAmount =
                 yield return new WaitForSeconds(1.0f);
             } while (async.isDone);
 
-            while(Transition.instance.Playing){
-                yield return new WaitForSeconds(1.0f);
-            }
+            if (Transition.instance) {
+                while (Transition.instance.Playing) {
+                    yield return new WaitForSeconds(1.0f);
+                }
+            }            
 
             async.allowSceneActivation = true;
 

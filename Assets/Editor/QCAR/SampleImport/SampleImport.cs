@@ -1,5 +1,5 @@
 /*==============================================================================
-Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
+Copyright (c) 2010-2013 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Confidential and Proprietary - Qualcomm Connected Experiences, Inc.
 ==============================================================================*/
@@ -20,6 +20,6 @@ public class SampleImport : AssetPostprocessor
     {
         // Set the Unity version for internal use
         string path = Path.Combine(Application.dataPath, "StreamingAssets/QCAR");
-        QCARUnity.SetUnityVersion(path);
+        QCARUnityImpl.SetUnityVersion(path);
     }
 }

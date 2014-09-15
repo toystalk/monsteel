@@ -18,20 +18,29 @@ namespace Assets.Scripts.Core{
         public void OnComicStart(){
             ActivePage = 0;
             viewCenter = THUMBMAX / 2;
+        }
+
+        public void OnPageLoad () {
+
             ComicPages = new List<GameObject>();
             ComicThumbs = new List<ScrollContent>();
-        }        
-                
-        public void OnPageLoad () {
+            
             foreach (Transform child in GUIManager.instance.GetUI("PageRoot").transform) {
                 ComicPages.Add(child.gameObject);
             }
             foreach (Transform child in GUIManager.instance.GetUI("ScrollGrid").transform) {
                 ComicThumbs.Add(child.GetComponent<ScrollContent>());
             }
-
+            ComicPages[0].SetActive(false); 
             FirstPage = 0;
-            LastPage = ComicPages.Count-1;
+            LastPage = ComicPages.Count - 1;
+        }
+
+        public void StartPages () {
+            StartCoroutine("StartLoadedPages");
+        }
+        IEnumerator StartLoadedPages () {
+            yield return new WaitForSeconds(1.0f);            
             PageActiveAll();
         }
 
