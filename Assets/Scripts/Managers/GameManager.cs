@@ -158,6 +158,15 @@ namespace Assets.Scripts.Core {
             OnManagersInitialized("Comic");
         }
 
+        public void SetAutoFocus () {
+            StartCoroutine("StartAutoFocus");
+        }
+
+        IEnumerator StartAutoFocus () {
+            yield return new WaitForSeconds(1.0f);
+            CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
+        }
+
         // Starts the game updating a current state to begin
         void StartGame() {
             currentScene = Application.loadedLevelName;

@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<QCARConfig xsi:noNamespaceSchemaLocation="qcar_config.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Tracking>
+        <RigidBodyTarget name="Toystalk_Caveman" size="1 1" targetId="4ec0a3109080413ea7302b255faa1b82"/>
+    </Tracking>
+</QCARConfig>

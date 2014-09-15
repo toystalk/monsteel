@@ -24,6 +24,8 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
     void Start () {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
+        GameManager.instance.SetAutoFocus();
+
         if (mTrackableBehaviour) {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
         }
@@ -57,8 +59,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
 
     #region PRIVATE_METHODS
-
-
+    
     private void OnTrackingFound () {
         Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
         Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
