@@ -14,15 +14,16 @@ using System.Collections.Generic;
 
 namespace Assets.Scripts.Core {
     /*
-     * Current state names defined@GameManager prefab 
-     * ==============================================
-     * Home : home screen
-     * Lab : lab island menu
-     * Potion : choose potion to be made
-     * Remove : remove all ingredients from the cauldron
-     * InsertIgr : insert an ingredient in the cauldron
-     * 
-     */
+        * Current state names defined@GameManager prefab 
+        * ==============================================
+        * 
+        * Loader 
+        * Intro
+        * Comic
+        * Testimonial
+        * MiniGame
+        * 
+    */
     [System.Serializable]
     public class GameState {
         [SerializeField]

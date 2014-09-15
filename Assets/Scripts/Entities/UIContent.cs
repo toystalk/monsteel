@@ -6,6 +6,8 @@
  * Written by Daniel Costa <danielcosta@toystalk.com>, April 2014
  * 
  * Class to manage any UI attributes or interaction, to be extended from specific content classes.
+ * 
+ * TODO: Change this into an interface to be implemented by other classes.
  */
 
 using UnityEngine;
@@ -54,7 +56,7 @@ public class UIContent : MonoBehaviour {
         }
     }
 
-    public void OnClick () {
+    public virtual void OnClick () {
         // Call guimanager to handle button click
         GUIManager.instance.ButtonCallback (myName);
     }
@@ -83,11 +85,41 @@ public class UIContent : MonoBehaviour {
         return GetComponent<UIPanel>();
     }
 
+    public virtual TweenColor GetColorTweener () {
+        return GetComponent<TweenColor>();
+    }
+
+    public virtual TweenAlpha GetAlphaTweener () {
+        return GetComponent<TweenAlpha>();
+    }
+
+    public virtual TweenHeight GetHeightTweener () {
+        return GetComponent<TweenHeight>();
+    }
+
+    public virtual TweenWidth GetWidthTweener () {
+        return GetComponent<TweenWidth>();
+    }
+
+    public virtual TweenPosition GetPositionTweener () {
+        return GetComponent<TweenPosition>();
+    }
+
+    public virtual TweenScale GetScaleTweener () {
+        return GetComponent<TweenScale>();
+    }
+
     public void OnEnable () {
         //GameManager.Debugger("Object " + myName + " enabled.");
     }
 
     public void OnDisable () {
         //GameManager.Debugger("Object " + myName + " disabled.");
+    }
+
+    public void ChildActiveAll (bool setActive) {
+        foreach (Transform t in transform) {
+            t.gameObject.SetActive(setActive);
+        }
     }
 }

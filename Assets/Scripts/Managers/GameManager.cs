@@ -21,6 +21,7 @@ using System;
 namespace Assets.Scripts.Core {
     // Game states, divided by every different moment of the game
     public enum GameStateHandler {
+        Loader,
         Intro,
         Comic,
         Testimonial,
@@ -37,9 +38,11 @@ namespace Assets.Scripts.Core {
 
         void initDebug () {
             debugInput = (ChatInput)FindObjectOfType(typeof(ChatInput));
-            DontDestroyOnLoad(GUIManager.instance.GetUI("DebugUI").gameObject);
-            SetDebug = true;
-            DebuggerEnabled();
+            if (debugInput) {
+                DontDestroyOnLoad(GUIManager.instance.GetUI("DebugUI").gameObject);
+                SetDebug = true;
+                DebuggerEnabled();
+            }
         }
 
         public static void Debugger (UnityEngine.Object log) {
@@ -148,6 +151,13 @@ namespace Assets.Scripts.Core {
             OnManagersInitialized("Vuforia");
         }
 
+        void initComicManager () {
+            ComicManager.instance.OnComicStart();
+            ComicManager.makeChildOf(gameObject);
+
+            OnManagersInitialized("Comic");
+        }
+
         // Starts the game updating a current state to begin
         void StartGame() {
             currentScene = Application.loadedLevelName;
@@ -212,17 +222,17 @@ namespace Assets.Scripts.Core {
              * ==================================================
              * Current States :
              * 
-             * Home : home screen
-             * Lab : lab island menu
-             * Potion : choose potion to be made
-             * Remove : remove all ingredients from the cauldron
-             * Removed : cauldron sent signal due to all ingredients removal
-             * InsertIgr : insert an ingredient in the cauldron
-             * PotionReady : potion is ready to start RA
-             * 
+             * Intro
+             * Comic
+             * Testimonial
+             * MiniGame
              */
             switch (currentState.GetName()) {
-                case "Potion":
+                case "Intro":
+                    initComicManager();
+                    StartCoroutine(LoadAfterSecs(GameStateHandler.Comic, 5.0f));
+                    break;
+                case "Testimonial":
                     break;
                 default:
                     break;
@@ -238,8 +248,8 @@ namespace Assets.Scripts.Core {
             GUIManager.instance.initContents();
 
             /*
-             * Use to instantiate new managers
-             * ===============================
+             * Use to do stuff exclusively when the state's scene loads
+             * ========================================================
              * Current States :
              * 
              * Intro
@@ -248,7 +258,15 @@ namespace Assets.Scripts.Core {
              * MiniGame
              */
             switch (currentState.GetName()) {
-                case "PotionLab":
+                case "Intro":
+                    break;
+                case "Comic": 
+                    GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayForward();
+                    GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayForward();
+                    break;
+                case "Testimonial":                    
+                    GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayForward();
+                    GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayForward();
                     break;
                 default:
                     break;
@@ -259,18 +277,36 @@ namespace Assets.Scripts.Core {
         
         #endregion
 
+        IEnumerator LoadAfterSecs (GameStateHandler nextState, float delaySecs) {
+            yield return new WaitForSeconds(delaySecs);
+            //Transition.StartFade("In");
+            updateState(nextState);
+        }
+
         // Routine responsible for loading a level async, updating UI content after.
         IEnumerator load(string levelToLoad) {
             GameManager.Debugger("LOADING : " + levelToLoad);
+
+            GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayReverse();
+            GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().ResetToBeginning();
+            GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayReverse();
+            GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().ResetToBeginning();
+
+            yield return new WaitForSeconds(2.0f);
+
+            //(changed load level async to additive async while testing new load)
             AsyncOperation async = Application.LoadLevelAsync(levelToLoad);
             async.allowSceneActivation = false;
             do {
+                //GUIManager.GetUI("Loading").Get2DSprite.fillAmount =
                 yield return new WaitForSeconds(1.0f);
             } while (async.isDone);
 
-            while(Transition.playing){
-                yield return new WaitForSeconds(1.0f);
-            }
+            if (Transition.instance) {
+                while (Transition.instance.Playing) {
+                    yield return new WaitForSeconds(1.0f);
+                }
+            }            
 
             async.allowSceneActivation = true;
 

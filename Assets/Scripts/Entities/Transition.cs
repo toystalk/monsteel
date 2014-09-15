@@ -17,10 +17,21 @@ public class Transition : MonoBehaviour {
     //Static method to start fading
     public static void StartFade (string fadeOption) {
         try {
-            FindObjectOfType<Transition>().startFade(fadeOption);
+            instance.startFade(fadeOption);
         }
         catch (System.Exception error) {
-            GameManager.Debugger("Couldn't find fade object" + error.ToString());
+            GameManager.Debugger("Couldn't find fade object " + error.ToString());
+        }
+    }
+
+    public static Transition _instance;
+    public static Transition instance {
+        get {
+            if (_instance == null) {
+                // Finds the instance of type T
+                _instance = FindObjectOfType<Transition>();
+            }
+            return _instance;
         }
     }
 
@@ -32,13 +43,9 @@ public class Transition : MonoBehaviour {
     //TODO: maybe set fadeIn with get/set to automatically change PlayFade
     public bool fadeIn = true;
     public bool playOnAwake = true;
-    public bool _playing = false;
-    public static bool playing {
-        get {
-            return FindObjectOfType<Transition>()._playing;
-        }
-    }
 
+    public bool Playing { get; set; }
+    
     delegate IEnumerator FadeTransition ();
 
     FadeTransition PlayFade;
@@ -111,12 +118,12 @@ public class Transition : MonoBehaviour {
     }
 
     void OnTransitionStart () {
-        _playing = true;
+        Playing = true;
         GameManager.Debugger("Transition started");
     }
 
     void OnTransitionEnd () {
-        _playing = false;
+        Playing = false;
         GameManager.Debugger("Transition ended");
     }
 }
