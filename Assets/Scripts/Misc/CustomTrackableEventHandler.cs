@@ -22,9 +22,12 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
     #region UNTIY_MONOBEHAVIOUR_METHODS
 
+    ControlFrankHead FrankController;
+
     void Start () {
         mTrackableBehaviour = GetComponent<TrackableBehaviour>();
         GameManager.instance.SetAutoFocus();
+        FrankController = FindObjectOfType<ControlFrankHead>();
 
         if (mTrackableBehaviour) {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
@@ -75,7 +78,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         }
 
         try {
-            FindObjectOfType<ControlFrankHead>().InitFrank();
+            FrankController.InitFrank();
             GUIManager.instance.GetUI("UIMask").display = false;
         }
         catch(System.Exception error) {
@@ -102,7 +105,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
 
         try {
-            FindObjectOfType<ControlFrankHead>().StopFrank();
+            FrankController.StopFrank();
             GUIManager.instance.GetUI("UIMask").display = true;
         }
         catch (System.Exception error) {

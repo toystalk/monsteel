@@ -4,15 +4,18 @@ using System.Collections;
 public class ControlFrankHead : MonoBehaviour {
 
     public MegaPointCache mp;
-    public Animator ac;
+    public MegaPointCache mp2;
     public AudioSource asrc;
     bool ativado = false;
 
 	// Use this for initialization
 	public void InitFrank () {
         Debug.Log("START");
+        mp.gameObject.SetActive(true);
+        mp.time = 0;
         mp.animated = true;
-        ac.SetTrigger("Play");
+        mp2.time = 0;
+        mp.transform.parent.gameObject.SetActive(true);
         ativado = true;
         asrc.Play();
 	}
@@ -21,8 +24,9 @@ public class ControlFrankHead : MonoBehaviour {
         Debug.Log("STOP");
         asrc.Stop();
         mp.animated = false;
-        mp.time = 0;
-        ac.SetTrigger("Reset");
+        mp2.animated = false;
+        mp2.gameObject.SetActive(false);
+        mp.transform.parent.gameObject.SetActive(false);
     }
 	
 	// Update is called once per frame
@@ -31,6 +35,9 @@ public class ControlFrankHead : MonoBehaviour {
             if (mp.time >= mp.maxtime) {
                 mp.animated = false;
                 mp.time = 0;
+                mp.gameObject.SetActive(false);
+                mp2.gameObject.SetActive(true);
+                mp2.animated = true;                
             }
         }
 	}

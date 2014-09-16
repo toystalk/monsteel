@@ -36,12 +36,12 @@ AnimationClip:
         value: {x: -100.169067, y: -5.25328445, z: 0}
         inSlope: {x: -25.8578129, y: -44.8035049, z: 0}
         outSlope: {x: -25.8578129, y: -44.8035049, z: 0}
-        tangentMode: 590416860
+        tangentMode: 1518822396
       - time: 2.41666675
         value: {x: -105.340637, y: -19.6685524, z: 0}
         inSlope: {x: -51.7156258, y: -144.152466, z: 0}
         outSlope: {x: -51.7156258, y: -144.152466, z: 0}
-        tangentMode: 1095761920
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: FrankRA/Quadro02
@@ -57,12 +57,12 @@ AnimationClip:
         value: {x: 24.0511169, y: 70.3667984, z: 0}
         inSlope: {x: -14.1477175, y: -41.3922386, z: 0}
         outSlope: {x: -14.1477175, y: -41.3922386, z: 0}
-        tangentMode: 590416860
+        tangentMode: 1511558896
       - time: 2.79999995
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: -28.295435, y: -82.7844772, z: 0}
         outSlope: {x: -28.295435, y: -82.7844772, z: 0}
-        tangentMode: 598366908
+        tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: FrankRA/Quadro02/Q2_maofrank
@@ -73,17 +73,17 @@ AnimationClip:
         value: {x: -7.75566626, y: -134, z: 0}
         inSlope: {x: -5.69005728, y: 0, z: 0}
         outSlope: {x: -5.69005728, y: 0, z: 0}
-        tangentMode: 0
+        tangentMode: 3
       - time: 2.7166667
         value: {x: -23.2136555, y: -134, z: 0}
         inSlope: {x: -6.87379169, y: 0, z: 0}
         outSlope: {x: -6.87379169, y: 0, z: 0}
-        tangentMode: 594906156
+        tangentMode: 1065353216
       - time: 3.6833334
         value: {x: -31.0025978, y: -134, z: 0}
         inSlope: {x: -8.05752659, y: 0, z: 0}
         outSlope: {x: -8.05752659, y: 0, z: 0}
-        tangentMode: 0
+        tangentMode: 82
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: FrankRA/Q3_frank_estilingue
@@ -94,12 +94,12 @@ AnimationClip:
         value: {x: 79.1119232, y: -24.5961571, z: 0}
         inSlope: {x: -75.3446884, y: 23.4249134, z: 0}
         outSlope: {x: -75.3446884, y: 23.4249134, z: 0}
-        tangentMode: 1102800441
+        tangentMode: 0
       - time: 1.04999995
         value: {x: 0, y: 0, z: 0}
         inSlope: {x: -75.3446884, y: 23.4249134, z: 0}
         outSlope: {x: -75.3446884, y: 23.4249134, z: 0}
-        tangentMode: 1102800441
+        tangentMode: 1520961072
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Quadro03/Q3_amebassemtrilho
@@ -116,7 +116,7 @@ AnimationClip:
         value: {x: 1, y: 1, z: 1}
         inSlope: {x: .0357612111, y: .0357612111, z: .0357612111}
         outSlope: {x: .0357612111, y: .0357612111, z: .0357612111}
-        tangentMode: 1095762032
+        tangentMode: 10
       m_PreInfinity: 2
       m_PostInfinity: 2
     path: Quadro01
@@ -351,111 +351,107 @@ AnimationClip:
     path: FrankRA/Q3_frank_estilingue
     classID: 114
     script: {fileID: 11500000, guid: 75e7459110b9666449485c40f25362a5, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0333333
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: mColor.r
+    path: FrankRA/Q1_balao
+    classID: 114
+    script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0333333
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: mColor.g
+    path: FrankRA/Q1_balao
+    classID: 114
+    script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0333333
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: mColor.b
+    path: FrankRA/Q1_balao
+    classID: 114
+    script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0333333
+        value: 1
+        inSlope: .967741966
+        outSlope: .967741966
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: mColor.a
+    path: FrankRA/Q1_balao
+    classID: 114
+    script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 4.2166667
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: FrankRA/BgAlpha
+    classID: 1
+    script: {fileID: 0}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
-  m_ClipBindingConstant:
-    genericBindings:
-    - path: 2457929751
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 1720208305
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 12788717
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 833519060
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 3787525132
-      attribute: 3
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 2457929751
-      attribute: 4224524717
-      script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
-      classID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - path: 12788717
-      attribute: 4224524717
-      script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
-      classID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - path: 12788717
-      attribute: 3305885265
-      script: {fileID: 0}
-      classID: 65
-      customType: 0
-      isPPtrCurve: 0
-    - path: 12788717
-      attribute: 3305885265
-      script: {fileID: 11500000, guid: 75e7459110b9666449485c40f25362a5, type: 3}
-      classID: 114
-      customType: 24
-      isPPtrCurve: 0
-    - path: 3787525132
-      attribute: 1
-      script: {fileID: 0}
-      classID: 4
-      customType: 0
-      isPPtrCurve: 0
-    - path: 2457929751
-      attribute: 2138267763
-      script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
-      classID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - path: 2457929751
-      attribute: 313427096
-      script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
-      classID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - path: 2457929751
-      attribute: 1657040919
-      script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
-      classID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - path: 12788717
-      attribute: 2138267763
-      script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
-      classID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - path: 12788717
-      attribute: 313427096
-      script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
-      classID: 114
-      customType: 0
-      isPPtrCurve: 0
-    - path: 12788717
-      attribute: 1657040919
-      script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
-      classID: 114
-      customType: 0
-      isPPtrCurve: 0
-    pptrCurveMapping: []
   m_AnimationClipSettings:
     serializedVersion: 2
     m_StartTime: 0
@@ -1076,5 +1072,100 @@ AnimationClip:
     path: FrankRA/Q3_frank_estilingue
     classID: 114
     script: {fileID: 11500000, guid: 75e7459110b9666449485c40f25362a5, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0333333
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: mColor.r
+    path: FrankRA/Q1_balao
+    classID: 114
+    script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0333333
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: mColor.g
+    path: FrankRA/Q1_balao
+    classID: 114
+    script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0333333
+        value: 1
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: mColor.b
+    path: FrankRA/Q1_balao
+    classID: 114
+    script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: 0
+        outSlope: 0
+        tangentMode: 0
+      - time: 1.0333333
+        value: 1
+        inSlope: .967741966
+        outSlope: .967741966
+        tangentMode: 10
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: mColor.a
+    path: FrankRA/Q1_balao
+    classID: 114
+    script: {fileID: 11500000, guid: e96b31ce75e592f45a1cff563a4869db, type: 3}
+  - curve:
+      serializedVersion: 2
+      m_Curve:
+      - time: 0
+        value: 0
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      - time: 4.2166667
+        value: 1
+        inSlope: Infinity
+        outSlope: Infinity
+        tangentMode: 31
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+    attribute: m_IsActive
+    path: FrankRA/BgAlpha
+    classID: 1
+    script: {fileID: 0}
   m_EulerEditorCurves: []
   m_Events: []

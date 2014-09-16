@@ -36,11 +36,19 @@ namespace Assets.Scripts.Core{
             LastPage = ComicPages.Count - 1;
         }
 
+        public void StartCheck () {
+            if (ActivePage > 0) {
+                GUIManager.instance.GetUI("StartScreen").display = false;
+                ActivePage++;
+                StartPages();
+            }
+        }
+
         public void StartPages () {
             StartCoroutine("StartLoadedPages");
         }
         IEnumerator StartLoadedPages () {
-            yield return new WaitForSeconds(1.0f);            
+            yield return new WaitForSeconds(1.0f);
             PageActiveAll();
         }
 

@@ -2,23 +2,19 @@
 using System.Collections;
 
 public class PageContent : MonoBehaviour {
-
-    bool childActive = false;
-
-	void OnEnable () {
-        childActive = true;
-        //Invoke("ChildActiveAll", 3.0f);    
-	}
-
+    
     void OnDisable () {
-        childActive = false;
-        ChildActiveAll();
-        CancelInvoke();
     }
 
+	void OnEnable () {
+        ChildActiveAll();    
+	}
+    
     void ChildActiveAll () {
-        foreach (Transform t in transform) {
-            t.gameObject.SetActive(childActive);
+        Animator ac = GetComponent<Animator>();
+
+        if (ac != null) {
+            ac.SetTrigger("Play");
         }
     }
 }

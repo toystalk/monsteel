@@ -347,7 +347,349 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: C4D Animation Take
+      takeName: C4D Animation Take
+      firstFrame: 0
+      lastFrame: 300
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: anim_global01
+        weight: 1
+      - path: anim_global01/controls01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_chest01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_chest01/anim_head01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_chest01/anim_head01/nDrv_head01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_chest01/nDrv_chest01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_arm01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_arm01/Goal_L_arm01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_arm01/nDrv_anim_L_fingers01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_arm01/nDrv_anim_L_fingers01/anim_L_index01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_arm01/nDrv_anim_L_fingers01/anim_L_mid01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_arm01/nDrv_anim_L_fingers01/anim_L_pinky01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_arm01/nDrv_anim_L_fingers01/anim_L_ring01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_arm01/nDrv_anim_L_fingers01/anim_L_thumb01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_arm01/nDrv_L_hand01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_should01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_L_should01/nDrv_L_should01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_pelvis01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_pelvis01/nDrv_pelvis01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_arm01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_arm01/Goal_R_arm01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_arm01/nDrv_anim_R_fingers01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_arm01/nDrv_anim_R_fingers01/anim_R_index01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_arm01/nDrv_anim_R_fingers01/anim_R_mid01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_arm01/nDrv_anim_R_fingers01/anim_R_pinky01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_arm01/nDrv_anim_R_fingers01/anim_R_ring01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_arm01/nDrv_anim_R_fingers01/anim_R_thumb01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_arm01/nDrv_R_hand01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_should01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/anim_R_should01/nDrv_R_should01
+        weight: 1
+      - path: anim_global01/controls01/anim_COG01/nDrv_COG01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_leg01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_leg01/goal_L_leg01
+        weight: 1
+      - path: anim_global01/controls01/anim_L_leg01/nDrv_L_ankle_ori01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_leg01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_leg01/goal_R_leg01
+        weight: 1
+      - path: anim_global01/controls01/anim_R_leg01/nDrv_R_ankle_ori01
+        weight: 1
+      - path: anim_global01/expr_L_elbow01
+        weight: 1
+      - path: anim_global01/expr_R_elbow01
+        weight: 1
+      - path: anim_global01/Root01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_L_thigh01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_L_thigh01/Skin_L_thigh01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_L_thigh01/Skin_L_thigh01/Skin_L_shin01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_L_thigh01/Skin_L_thigh01/Skin_L_shin01/jntEnd_L_ankle01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_L_thigh01/Skin_L_thigh01/Skin_L_shin01/jntEnd_L_ankle01/Root_L_ankle01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_L_thigh01/Skin_L_thigh01/Skin_L_shin01/jntEnd_L_ankle01/Root_L_ankle01/Skin_L_ankle01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_L_thigh01/Skin_L_thigh01/Skin_L_shin01/jntEnd_L_ankle01/Root_L_ankle01/Skin_L_ankle01/Skin_L_foot01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_L_thigh01/Skin_L_thigh01/Skin_L_shin01/jntEnd_L_ankle01/Root_L_ankle01/Skin_L_ankle01/Skin_L_foot01/jntEnd_L_01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_L_thigh01/Skin_L_thigh01_Pole
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_R_thigh01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_R_thigh01/Skin_R_thigh01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_R_thigh01/Skin_R_thigh01/Skin_R_shin01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_R_thigh01/Skin_R_thigh01/Skin_R_shin01/jntEnd_R_ankle01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_R_thigh01/Skin_R_thigh01/Skin_R_shin01/jntEnd_R_ankle01/Root_R_ankle01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_R_thigh01/Skin_R_thigh01/Skin_R_shin01/jntEnd_R_ankle01/Root_R_ankle01/Skin_R_ankle01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_R_thigh01/Skin_R_thigh01/Skin_R_shin01/jntEnd_R_ankle01/Root_R_ankle01/Skin_R_ankle01/Skin_R_foot01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_R_thigh01/Skin_R_thigh01/Skin_R_shin01/jntEnd_R_ankle01/Root_R_ankle01/Skin_R_ankle01/Skin_R_foot01/jntEnd_R_01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/Root_pelvis01/Skin_pelvis01/jntEnd_pelvis01/Root_R_thigh01/Skin_R_thigh01_Pole
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_should01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_should01/skin_L_should01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_should01/skin_L_should01/jntEnd_L_sould01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_index01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_index01/skin_L_index_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_index01/skin_L_index_a01/skin_L_index_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_index01/skin_L_index_a01/skin_L_index_b01/skin_L_index_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_index01/skin_L_index_a01/skin_L_index_b01/skin_L_index_c01/jntEnd_L_index_d01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_mid01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_mid01/skin_L_mid_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_mid01/skin_L_mid_a01/skin_L_mid_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_mid01/skin_L_mid_a01/skin_L_mid_b01/skin_L_mid_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_mid01/skin_L_mid_a01/skin_L_mid_b01/skin_L_mid_c01/jntEnd_L_mid_da01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_pinky01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_pinky01/skin_L_pinky_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_pinky01/skin_L_pinky_a01/skin_L_pinky_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_pinky01/skin_L_pinky_a01/skin_L_pinky_b01/skin_L_pinky_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_pinky01/skin_L_pinky_a01/skin_L_pinky_b01/skin_L_pinky_c01/skin_L_pinky_d01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_ring01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_ring01/skin_L_ring_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_ring01/skin_L_ring_a01/skin_L_ring_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_ring01/skin_L_ring_a01/skin_L_ring_b01/skin_L_ring_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_ring01/skin_L_ring_a01/skin_L_ring_b01/skin_L_ring_c01/skin_L_ring_d01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_thumb01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_thumb01/skin_L_thumb_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_thumb01/skin_L_thumb_a01/skin_L_thumb_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_thumb01/skin_L_thumb_a01/skin_L_thumb_b01/sking_L_thumb_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_L_shoulder01/skin_L_shoulder01/skin_L_forearm01/jntEnd_L_wrist01/Root_L_hand01/skin_L_hand01/jntEnd_L_hand01/Root_L_thumb01/skin_L_thumb_a01/skin_L_thumb_b01/sking_L_thumb_c01/jntEnd_L_thub_d01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/Root_R_should01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/Root_R_should01/skin_R_should01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/Root_R_should01/skin_R_should01/jntEnd_R_sould01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_index01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_index01/skin_R_index_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_index01/skin_R_index_a01/skin_R_index_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_index01/skin_R_index_a01/skin_R_index_b01/skin_R_index_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_index01/skin_R_index_a01/skin_R_index_b01/skin_R_index_c01/jntEnd_R_index_d01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_mid01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_mid01/skin_R_mid_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_mid01/skin_R_mid_a01/skin_R_mid_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_mid01/skin_R_mid_a01/skin_R_mid_b01/skin_R_mid_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_mid01/skin_R_mid_a01/skin_R_mid_b01/skin_R_mid_c01/jntEnd_R_mid_da01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_pinky01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_pinky01/skin_R_pinky_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_pinky01/skin_R_pinky_a01/skin_R_pinky_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_pinky01/skin_R_pinky_a01/skin_R_pinky_b01/skin_R_pinky_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_pinky01/skin_R_pinky_a01/skin_R_pinky_b01/skin_R_pinky_c01/skin_R_pinky_d01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_ring01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_ring01/skin_R_ring_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_ring01/skin_R_ring_a01/skin_R_ring_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_ring01/skin_R_ring_a01/skin_R_ring_b01/skin_R_ring_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_ring01/skin_R_ring_a01/skin_R_ring_b01/skin_R_ring_c01/skin_R_ring_d01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_thumb01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_thumb01/skin_R_thumb_a01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_thumb01/skin_R_thumb_a01/skin_R_thumb_b01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_thumb01/skin_R_thumb_a01/skin_R_thumb_b01/sking_R_thumb_c01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/Root_R_shoulder01/skin_R_shoulder01/skin_R_forearm01/jntEnd_R_wrist01/Root_R_hand01/skin_R_hand01/jntEnd_R_hand01/Root_R_thumb01/skin_R_thumb_a01/skin_R_thumb_b01/sking_R_thumb_c01/jntEnd_R_thub_d01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/skin_neck01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/skin_neck01/skin_head01
+        weight: 1
+      - path: anim_global01/Root01/skin_back01/skin_chest01/skin_neck01/skin_head01/jntEnd_head01
+        weight: 1
+      - path: Expression
+        weight: 1
+      - path: Expression_1
+        weight: 1
+      - path: Expression_2
+        weight: 1
+      - path: Expression_3
+        weight: 1
+      - path: Expression_4
+        weight: 1
+      - path: Expression_5
+        weight: 1
+      - path: Expression_6
+        weight: 1
+      - path: Expression_7
+        weight: 1
+      - path: Expression_8
+        weight: 1
+      - path: Expression_9
+        weight: 1
+      - path: Expression_10
+        weight: 1
+      - path: Frank_arm_
+        weight: 1
+      - path: Frank_arm_/Skin_2
+        weight: 1
+      - path: Frank_body
+        weight: 1
+      - path: Frank_body/Skin_4
+        weight: 1
+      - path: Frank_head__Copy_
+        weight: 1
+      - path: Frank_head__Copy_/Skin
+        weight: 1
+      - path: Frank_omb_
+        weight: 1
+      - path: Frank_omb_/Skin_3
+        weight: 1
+      - path: Plane
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
@@ -365,9 +707,9 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 167
     splitTangentsAcrossUV: 1
-    normalImportMode: 0
+    normalImportMode: 1
     tangentImportMode: 1
   importAnimation: 1
   copyAvatar: 0

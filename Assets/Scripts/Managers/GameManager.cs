@@ -241,6 +241,9 @@ namespace Assets.Scripts.Core {
                     initComicManager();
                     StartCoroutine(LoadAfterSecs(GameStateHandler.Comic, 5.0f));
                     break;
+                case "Comic":
+                    ComicManager.instance.StartCheck();
+                    break;
                 case "Testimonial":
                     break;
                 default:
@@ -301,13 +304,12 @@ namespace Assets.Scripts.Core {
             GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayReverse();
             GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().ResetToBeginning();
 
-            yield return new WaitForSeconds(2.0f);
+            yield return new WaitForSeconds(3.0f);
 
             //(changed load level async to additive async while testing new load)
             AsyncOperation async = Application.LoadLevelAsync(levelToLoad);
             async.allowSceneActivation = false;
             do {
-                //GUIManager.GetUI("Loading").Get2DSprite.fillAmount =
                 yield return new WaitForSeconds(1.0f);
             } while (async.isDone);
 
