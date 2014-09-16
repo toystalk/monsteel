@@ -47,6 +47,10 @@ namespace Assets.Scripts.Core {
             myMethod.Invoke(this,null);
         }
 
+        public void Q3_frank_estilingueClick () {
+            GameManager.SetState(GameStateHandler.MiniGame);
+        }
+
         public void SmokeButtonClick () {
             GameObject.Find("SmokeFX").GetComponent<ParticleSystem>().Stop();
             GetUI("Q2_morcego").GetAlphaTweener().PlayForward();

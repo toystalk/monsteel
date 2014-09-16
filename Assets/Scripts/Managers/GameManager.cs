@@ -135,8 +135,8 @@ namespace Assets.Scripts.Core {
                 GUIManager.instance.initContents();
                 GUIManager.makeChildOf(gameObject);
                 //Initialize AudioManager
-                AudioManager.makeChildOf(gameObject);
-                OnManagersInitialized("GUI, Audio");
+                //AudioManager.makeChildOf(gameObject);
+                OnManagersInitialized("GUI");
                 initDebug();
             }
             else {
@@ -277,6 +277,10 @@ namespace Assets.Scripts.Core {
                     GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayForward();
                     break;
                 case "Testimonial":                    
+                    GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayForward();
+                    GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayForward();
+                    break;
+                case "MiniGame":
                     GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayForward();
                     GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayForward();
                     break;

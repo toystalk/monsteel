@@ -12429,6 +12429,7 @@ GameObject:
   - 114: {fileID: 1219250387}
   - 65: {fileID: 1219250389}
   - 114: {fileID: 1219250388}
+  - 114: {fileID: 1219250390}
   m_Layer: 8
   m_Name: Q3_frank_estilingue
   m_TagString: Untagged
@@ -12550,6 +12551,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1557, y: 788, z: 0}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1219250390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1219250385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0317dfd1658b69a4bb051ec3cdc85c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myName: 
+  myObj: {fileID: 0}
+  myFadingSpeed: 0
+  _display: 0
+  _draggable: 0
 --- !u!1 &1245068087
 GameObject:
   m_ObjectHideFlags: 0

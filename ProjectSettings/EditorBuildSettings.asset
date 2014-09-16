@@ -10,6 +10,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Comic.unity
   - enabled: 1
-    path: Assets/Scenes/Minigame.unity
+    path: Assets/Scenes/MiniGame.unity
   - enabled: 1
     path: Assets/Scenes/Testimonial.unity
