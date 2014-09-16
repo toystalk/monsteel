@@ -10780,35 +10780,35 @@ MonoBehaviour:
   _masterEffects: {fileID: 1944290158}
   audioList:
   - name: shot
-    content: {fileID: 8300000, guid: f59d1a94cc4f2ef4b951556fbf58ae1c, type: 3}
+    content: {fileID: 8300000, guid: 9071cd3250223904b8744b1c6c0dea35, type: 3}
     source: {fileID: 0}
     loop: 0
   - name: amebaSpawn
-    content: {fileID: 8300000, guid: a85f036d4682e61409840ad60b143c47, type: 3}
+    content: {fileID: 8300000, guid: ab8e2b84f0e094f4a8e0487129619160, type: 3}
     source: {fileID: 0}
     loop: 0
   - name: amebaJump
-    content: {fileID: 8300000, guid: 892365a0d2b9c5b44838064029e39e2e, type: 3}
+    content: {fileID: 8300000, guid: 32f8db715bd266f4dbd728df68dd3ba7, type: 3}
     source: {fileID: 0}
     loop: 0
   - name: frankHurt
-    content: {fileID: 8300000, guid: c0c80b81414494e4985901b519cc16f3, type: 3}
+    content: {fileID: 8300000, guid: fb8b2abae94667642b4ff47a00786d92, type: 3}
     source: {fileID: 0}
     loop: 0
   - name: amebaSplash
-    content: {fileID: 8300000, guid: 985d383653a360e439f5b179bced0130, type: 3}
+    content: {fileID: 8300000, guid: 04d5541c546c2b342bb93678a06a4c29, type: 3}
     source: {fileID: 0}
     loop: 0
   - name: winLevel
-    content: {fileID: 8300000, guid: 739371891eabb0d4a8939d32d2f942d3, type: 3}
+    content: {fileID: 8300000, guid: 7cea4b016574e6744a47ed94434f85e2, type: 3}
     source: {fileID: 0}
     loop: 0
   - name: loseLevel
-    content: {fileID: 8300000, guid: 9512510aa0dd776438d4131d791becfe, type: 3}
+    content: {fileID: 8300000, guid: fb92a9e3e6607ca44904bf9d9eaae7b0, type: 3}
     source: {fileID: 0}
     loop: 0
   - name: bgm
-    content: {fileID: 8300000, guid: 4b3a4282fdb837e498723e34fa6f13cc, type: 3}
+    content: {fileID: 8300000, guid: 7d56aa7e15e552340afba6aec9055c9c, type: 3}
     source: {fileID: 0}
     loop: 1
 --- !u!1 &1949033258
@@ -11348,6 +11348,38 @@ Prefab:
       propertyPath: enemySpeed
       value: .150000006
       objectReference: {fileID: 0}
+    - target: {fileID: 11400006, guid: 14dc8ea78f5f3d14a8ad00d8cd39b1ef, type: 2}
+      propertyPath: audioList.Array.data[0].content
+      value: 
+      objectReference: {fileID: 8300000, guid: 9071cd3250223904b8744b1c6c0dea35, type: 3}
+    - target: {fileID: 11400006, guid: 14dc8ea78f5f3d14a8ad00d8cd39b1ef, type: 2}
+      propertyPath: audioList.Array.data[1].content
+      value: 
+      objectReference: {fileID: 8300000, guid: ab8e2b84f0e094f4a8e0487129619160, type: 3}
+    - target: {fileID: 11400006, guid: 14dc8ea78f5f3d14a8ad00d8cd39b1ef, type: 2}
+      propertyPath: audioList.Array.data[2].content
+      value: 
+      objectReference: {fileID: 8300000, guid: 32f8db715bd266f4dbd728df68dd3ba7, type: 3}
+    - target: {fileID: 11400006, guid: 14dc8ea78f5f3d14a8ad00d8cd39b1ef, type: 2}
+      propertyPath: audioList.Array.data[3].content
+      value: 
+      objectReference: {fileID: 8300000, guid: fb8b2abae94667642b4ff47a00786d92, type: 3}
+    - target: {fileID: 11400006, guid: 14dc8ea78f5f3d14a8ad00d8cd39b1ef, type: 2}
+      propertyPath: audioList.Array.data[4].content
+      value: 
+      objectReference: {fileID: 8300000, guid: 04d5541c546c2b342bb93678a06a4c29, type: 3}
+    - target: {fileID: 11400006, guid: 14dc8ea78f5f3d14a8ad00d8cd39b1ef, type: 2}
+      propertyPath: audioList.Array.data[5].content
+      value: 
+      objectReference: {fileID: 8300000, guid: 7cea4b016574e6744a47ed94434f85e2, type: 3}
+    - target: {fileID: 11400006, guid: 14dc8ea78f5f3d14a8ad00d8cd39b1ef, type: 2}
+      propertyPath: audioList.Array.data[6].content
+      value: 
+      objectReference: {fileID: 8300000, guid: fb92a9e3e6607ca44904bf9d9eaae7b0, type: 3}
+    - target: {fileID: 11400006, guid: 14dc8ea78f5f3d14a8ad00d8cd39b1ef, type: 2}
+      propertyPath: audioList.Array.data[7].content
+      value: 
+      objectReference: {fileID: 8300000, guid: 7d56aa7e15e552340afba6aec9055c9c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 14dc8ea78f5f3d14a8ad00d8cd39b1ef, type: 2}
   m_RootGameObject: {fileID: 1944290151}
