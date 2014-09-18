@@ -36,11 +36,19 @@ namespace Assets.Scripts.Core{
             LastPage = ComicPages.Count - 1;
         }
 
+        public void StartCheck () {
+            if (ActivePage > 0) {
+                GUIManager.instance.GetUI("StartScreen").display = false;
+                ActivePage++;
+                StartPages();
+            }
+        }
+
         public void StartPages () {
             StartCoroutine("StartLoadedPages");
         }
         IEnumerator StartLoadedPages () {
-            yield return new WaitForSeconds(1.0f);            
+            yield return new WaitForSeconds(1.0f);
             PageActiveAll();
         }
 
@@ -49,6 +57,7 @@ namespace Assets.Scripts.Core{
                 ComicPages[ActivePage].SetActive(false);
                 ActivePage++;
                 ComicPages[ActivePage].SetActive(true);
+                SoundCheck();
                 ThumbActiveNext();
             }
         }
@@ -58,6 +67,7 @@ namespace Assets.Scripts.Core{
                 ComicPages[ActivePage].SetActive(false);
                 ActivePage--;
                 ComicPages[ActivePage].SetActive(true);
+                SoundCheck();
                 ThumbActivePrevious();
             }
         }
@@ -89,12 +99,14 @@ namespace Assets.Scripts.Core{
             ActivePage = pageNum;
 
             ComicPages[ActivePage].SetActive(true);
+            SoundCheck();
             ComicThumbs[ActivePage].PlayResizeForward();
             ComicThumbs[ActivePage + 1].PlayAlphaForward();
         }
 
         void PageActiveAll () {
             ComicPages[ActivePage].SetActive(true);
+            SoundCheck();
             ComicThumbs[ActivePage].PlayAlphaForward();
             ComicThumbs[ActivePage+1].PlayAlphaForward();
             ComicThumbs[ActivePage].PlayResizeForward();
@@ -104,6 +116,25 @@ namespace Assets.Scripts.Core{
             }
 
             UpdateView();
+        }
+
+        void SoundCheck() {            
+            switch (ActivePage) {
+                case 0:
+                    GameManager.instance.PlayComic("PlayComic1");
+                    break;
+                case 1:
+                    GameManager.instance.PlayComic("PlayComic2");
+                    break;
+                case 2:
+                    GameManager.instance.PlayComic("PlayComic3");
+                    break;
+                case 3:
+                    GameManager.instance.PlayComic("PlayComic4");
+                    break;
+                default: 
+                    break;
+            }
         }
 
         void UpdateView () {

@@ -1,0 +1,265 @@
+fileFormatVersion: 2
+guid: 0b1a7720160c73646b310ebdd0c23d2c
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: AmebaHub001
+    100004: AmebaHub002
+    100006: AmebaLArm1
+    100008: AmebaLArm2
+    100010: AmebaLArmCollarbone
+    100012: AmebaLArmDigit11
+    100014: AmebaLArmDigit12
+    100016: AmebaLArmDigit21
+    100018: AmebaLArmDigit22
+    100020: AmebaLArmDigit31
+    100022: AmebaLArmDigit32
+    100024: AmebaLArmDigit41
+    100026: AmebaLArmDigit42
+    100028: AmebaLArmPalm
+    100030: AmebaRArm1
+    100032: AmebaRArm2
+    100034: AmebaRArmCollarbone
+    100036: AmebaRArmDigit11
+    100038: AmebaRArmDigit12
+    100040: AmebaRArmDigit21
+    100042: AmebaRArmDigit22
+    100044: AmebaRArmDigit31
+    100046: AmebaRArmDigit32
+    100048: AmebaRArmDigit41
+    100050: AmebaRArmDigit42
+    100052: AmebaRArmPalm
+    100054: AmebaSpine1
+    100056: AmebaSpine2
+    100058: AmebaSpine3
+    100060: AmebaSpine4
+    100062: AmebaSpine5
+    100064: AmebaTail1
+    100066: AmebaTail2
+    100068: AmebaTail3
+    100070: AmebaTail4
+    100072: AmebaTail5
+    100074: AmebaTail6
+    100076: Plane002
+    100078: Sphere002
+    100080: Sphere003
+    100082: Sphere004
+    400000: //RootNode
+    400002: AmebaHub001
+    400004: AmebaHub002
+    400006: AmebaLArm1
+    400008: AmebaLArm2
+    400010: AmebaLArmCollarbone
+    400012: AmebaLArmDigit11
+    400014: AmebaLArmDigit12
+    400016: AmebaLArmDigit21
+    400018: AmebaLArmDigit22
+    400020: AmebaLArmDigit31
+    400022: AmebaLArmDigit32
+    400024: AmebaLArmDigit41
+    400026: AmebaLArmDigit42
+    400028: AmebaLArmPalm
+    400030: AmebaRArm1
+    400032: AmebaRArm2
+    400034: AmebaRArmCollarbone
+    400036: AmebaRArmDigit11
+    400038: AmebaRArmDigit12
+    400040: AmebaRArmDigit21
+    400042: AmebaRArmDigit22
+    400044: AmebaRArmDigit31
+    400046: AmebaRArmDigit32
+    400048: AmebaRArmDigit41
+    400050: AmebaRArmDigit42
+    400052: AmebaRArmPalm
+    400054: AmebaSpine1
+    400056: AmebaSpine2
+    400058: AmebaSpine3
+    400060: AmebaSpine4
+    400062: AmebaSpine5
+    400064: AmebaTail1
+    400066: AmebaTail2
+    400068: AmebaTail3
+    400070: AmebaTail4
+    400072: AmebaTail5
+    400074: AmebaTail6
+    400076: Plane002
+    400078: Sphere002
+    400080: Sphere003
+    400082: Sphere004
+    2300000: Sphere002
+    2300002: Sphere003
+    2300004: Sphere004
+    3300000: Sphere002
+    3300002: Sphere003
+    3300004: Sphere004
+    4300000: Sphere004
+    4300002: Sphere002
+    4300004: Sphere003
+    4300006: Plane002
+    7400000: While_jump
+    9500000: //RootNode
+    13700000: Plane002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: While_jump
+      takeName: Take 001
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: AmebaHub001
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2/AmebaLArmPalm
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2/AmebaLArmPalm/AmebaLArmDigit11
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2/AmebaLArmPalm/AmebaLArmDigit11/AmebaLArmDigit12
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2/AmebaLArmPalm/AmebaLArmDigit21
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2/AmebaLArmPalm/AmebaLArmDigit21/AmebaLArmDigit22
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2/AmebaLArmPalm/AmebaLArmDigit31
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2/AmebaLArmPalm/AmebaLArmDigit31/AmebaLArmDigit32
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2/AmebaLArmPalm/AmebaLArmDigit41
+        weight: 1
+      - path: AmebaHub001/AmebaLArmCollarbone/AmebaLArm1/AmebaLArm2/AmebaLArmPalm/AmebaLArmDigit41/AmebaLArmDigit42
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2/AmebaRArmPalm
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2/AmebaRArmPalm/AmebaRArmDigit11
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2/AmebaRArmPalm/AmebaRArmDigit11/AmebaRArmDigit12
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2/AmebaRArmPalm/AmebaRArmDigit21
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2/AmebaRArmPalm/AmebaRArmDigit21/AmebaRArmDigit22
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2/AmebaRArmPalm/AmebaRArmDigit31
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2/AmebaRArmPalm/AmebaRArmDigit31/AmebaRArmDigit32
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2/AmebaRArmPalm/AmebaRArmDigit41
+        weight: 1
+      - path: AmebaHub001/AmebaRArmCollarbone/AmebaRArm1/AmebaRArm2/AmebaRArmPalm/AmebaRArmDigit41/AmebaRArmDigit42
+        weight: 1
+      - path: AmebaHub001/AmebaSpine1
+        weight: 1
+      - path: AmebaHub001/AmebaSpine1/AmebaSpine2
+        weight: 1
+      - path: AmebaHub001/AmebaSpine1/AmebaSpine2/AmebaSpine3
+        weight: 1
+      - path: AmebaHub001/AmebaSpine1/AmebaSpine2/AmebaSpine3/AmebaSpine4
+        weight: 1
+      - path: AmebaHub001/AmebaSpine1/AmebaSpine2/AmebaSpine3/AmebaSpine4/AmebaSpine5
+        weight: 1
+      - path: AmebaHub001/AmebaSpine1/AmebaSpine2/AmebaSpine3/AmebaSpine4/AmebaSpine5/AmebaHub002
+        weight: 1
+      - path: AmebaHub001/AmebaSpine1/AmebaSpine2/AmebaSpine3/AmebaSpine4/AmebaSpine5/AmebaHub002/Sphere002
+        weight: 1
+      - path: AmebaHub001/AmebaSpine1/AmebaSpine2/AmebaSpine3/AmebaSpine4/AmebaSpine5/AmebaHub002/Sphere003
+        weight: 1
+      - path: AmebaHub001/AmebaSpine1/AmebaSpine2/AmebaSpine3/AmebaSpine4/AmebaSpine5/AmebaHub002/Sphere004
+        weight: 1
+      - path: AmebaHub001/AmebaTail1
+        weight: 1
+      - path: AmebaHub001/AmebaTail1/AmebaTail2
+        weight: 1
+      - path: AmebaHub001/AmebaTail1/AmebaTail2/AmebaTail3
+        weight: 1
+      - path: AmebaHub001/AmebaTail1/AmebaTail2/AmebaTail3/AmebaTail4
+        weight: 1
+      - path: AmebaHub001/AmebaTail1/AmebaTail2/AmebaTail3/AmebaTail4/AmebaTail5
+        weight: 1
+      - path: AmebaHub001/AmebaTail1/AmebaTail2/AmebaTail3/AmebaTail4/AmebaTail5/AmebaTail6
+        weight: 1
+      - path: AmebaHub001/Plane002
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
