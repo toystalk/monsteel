@@ -52,6 +52,7 @@ namespace Assets.Scripts.Core {
         }
 
         public void SmokeButtonClick () {
+            GameManager.instance.audio1.PlayOneShot(GameManager.instance.audioPool[0]);
             GameObject.Find("SmokeFX").GetComponent<ParticleSystem>().Stop();
             GetUI("Q2_morcego").GetAlphaTweener().PlayForward();
             GetUI("Q2_morcego").GetPositionTweener().PlayForward();
@@ -62,6 +63,7 @@ namespace Assets.Scripts.Core {
         }
 
         public void StartButtonClick () {
+            GameManager.instance.audio1.PlayOneShot(GameManager.instance.audioPool[15]);
             GetUI("StartScreen").GetAlphaTweener().PlayForward();
             ComicManager.instance.StartPages();
         }

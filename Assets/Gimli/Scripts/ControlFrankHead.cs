@@ -3,6 +3,7 @@ using System.Collections;
 
 public class ControlFrankHead : MonoBehaviour {
 
+    public bool EndPoint = true;
     public MegaPointCache mp;
     public MegaPointCache mp2;
     public AudioSource asrc;
@@ -10,6 +11,7 @@ public class ControlFrankHead : MonoBehaviour {
 
 	// Use this for initialization
 	public void InitFrank () {
+        EndPoint = false;
         Debug.Log("START");
         mp.gameObject.SetActive(true);
         mp.time = 0;
@@ -21,6 +23,7 @@ public class ControlFrankHead : MonoBehaviour {
 	}
 
     public void StopFrank () {
+        EndPoint = true;
         Debug.Log("STOP");
         asrc.Stop();
         mp.animated = false;
@@ -37,7 +40,8 @@ public class ControlFrankHead : MonoBehaviour {
                 mp.time = 0;
                 mp.gameObject.SetActive(false);
                 mp2.gameObject.SetActive(true);
-                mp2.animated = true;                
+                mp2.animated = true;
+                EndPoint = true;
             }
         }
 	}

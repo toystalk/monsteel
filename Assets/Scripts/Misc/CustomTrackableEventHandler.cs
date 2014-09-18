@@ -78,7 +78,9 @@ public class CustomTrackableEventHandler : MonoBehaviour,
         }
 
         try {
-            FrankController.InitFrank();
+            if (FrankController.EndPoint) {
+                FrankController.InitFrank();
+            }
             GUIManager.instance.GetUI("UIMask").display = false;
         }
         catch(System.Exception error) {
@@ -105,7 +107,9 @@ public class CustomTrackableEventHandler : MonoBehaviour,
 
 
         try {
-            FrankController.StopFrank();
+            if (FrankController.EndPoint) {
+                FrankController.StopFrank();
+            }
             GUIManager.instance.GetUI("UIMask").display = true;
         }
         catch (System.Exception error) {

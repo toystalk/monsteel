@@ -85,6 +85,11 @@ namespace Assets.Scripts.Core {
         public bool stateChanged = false;
     #endif
 
+        public AudioSource audio1;
+        public AudioSource audio2;
+        public AudioSource audio3;
+        public List<AudioClip> audioPool;
+
         // Use this for initialization
         void Awake() {
             initManager();
@@ -272,11 +277,11 @@ namespace Assets.Scripts.Core {
             switch (currentState.GetName()) {
                 case "Intro":
                     break;
-                case "Comic": 
+                case "Comic":
                     GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayForward();
                     GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayForward();
                     break;
-                case "Testimonial":                    
+                case "Testimonial":
                     GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().PlayForward();
                     GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayForward();
                     break;
@@ -307,8 +312,9 @@ namespace Assets.Scripts.Core {
             GUIManager.instance.GetUI("LoaderTop").GetPositionTweener().ResetToBeginning();
             GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().PlayReverse();
             GUIManager.instance.GetUI("LoaderBot").GetPositionTweener().ResetToBeginning();
-
-            yield return new WaitForSeconds(3.0f);
+            yield return new WaitForSeconds(1.0f);
+            audio1.PlayOneShot(audioPool[5]);
+            yield return new WaitForSeconds(2.0f);
 
             //(changed load level async to additive async while testing new load)
             AsyncOperation async = Application.LoadLevelAsync(levelToLoad);
@@ -321,7 +327,7 @@ namespace Assets.Scripts.Core {
                 while (Transition.instance.Playing) {
                     yield return new WaitForSeconds(1.0f);
                 }
-            }            
+            }
 
             async.allowSceneActivation = true;
 
@@ -329,8 +335,45 @@ namespace Assets.Scripts.Core {
                 yield return new WaitForSeconds(0.01f);
             } while (Application.loadedLevelName != levelToLoad);
 
-            OnSceneLoad();            
+            OnSceneLoad();
+            yield return new WaitForSeconds(1.0f);
+            FindObjectOfType<AudioSource>().PlayOneShot(audioPool[11]);
         }
 
+        public void PlayComic (string comic) {
+            StopAllCoroutines();
+            audio1.Stop();
+            audio2.Stop();
+            audio3.Stop();
+            StartCoroutine(comic);
+            //Debug.Log("AOIHHHHHHHHHHHHHHHHHHA");
+        }
+
+        IEnumerator PlayComic1 () {
+            audio1.clip=audioPool[9];
+            audio1.Play();
+            yield return new WaitForSeconds(7.5f);
+            audio1.Stop();
+            yield return new WaitForSeconds(1.5f);
+            audio1.PlayOneShot(audioPool[4]);
+        }
+
+        IEnumerator PlayComic2 () {
+            audio3.clip = audioPool[3];
+            audio3.Play();
+            yield return null;
+        }
+
+        IEnumerator PlayComic3 () {
+            audio1.clip = audioPool[14];
+            audio1.Play();
+            yield return null;
+        }
+
+        IEnumerator PlayComic4 () {
+            audio1.clip = audioPool[12];
+            audio1.Play();
+            yield return null;
+        }
     }
 }
