@@ -1,4 +1,14 @@
-﻿using UnityEngine;
+﻿/* 
+ * Copyright (C) TOYS TALK - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ * 
+ * Written by Daniel Costa <danielcosta@toystalk.com>, August 2014
+ * 
+ * Class to manage scrolls and contents
+ */
+
+using UnityEngine;
 using System.Collections;
 using Assets.Scripts.Core;
 

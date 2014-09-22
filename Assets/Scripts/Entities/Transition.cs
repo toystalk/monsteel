@@ -5,7 +5,8 @@
  *
  * Written by Daniel Costa <danielcosta@toystalk.com>, August 2014
  * 
- * Class to handle fade in/out transitions between screens
+ * Class to handle fade in/out transitions between screens, 
+ * using a UI2DSprite with black texture.
  */
 
 using UnityEngine;
@@ -35,20 +36,19 @@ public class Transition : MonoBehaviour {
         }
     }
 
-    UI2DSprite myUI;
-    Color fadeColor;
-    [SerializeField]
-    float fadeSpeed = 1;
+    UI2DSprite myUI; // Black texture
+    Color fadeColor; // Cached color to be used through fade process
+    [SerializeField] 
+    float fadeSpeed = 1; // How fast fade will play
 
     //TODO: maybe set fadeIn with get/set to automatically change PlayFade
-    public bool fadeIn = true;
-    public bool playOnAwake = true;
+    public bool fadeIn = true; // Sets fade out or fade in
+    public bool playOnAwake = true; // If fade should be played when Awake is called
 
-    public bool Playing { get; set; }
+    public bool Playing { get; set; } // If fade is playing or not
     
-    delegate IEnumerator FadeTransition ();
-
-    FadeTransition PlayFade;
+    delegate IEnumerator FadeTransition (); // Delegate to play both fade in or out
+    FadeTransition PlayFade; 
     
     void Awake() {
         try {
@@ -60,6 +60,7 @@ public class Transition : MonoBehaviour {
         }
     }
 
+    // Configure fade according to properties values
     void initConfig () {
         if (fadeIn) {
             fadeColor = new Color(1, 1, 1, 0);
@@ -77,6 +78,7 @@ public class Transition : MonoBehaviour {
         }
     }
 
+    // Method to start fade out or in through static method call
     void startFade (string fadeOption) {
         switch (fadeOption) {
             case "In":
@@ -93,6 +95,7 @@ public class Transition : MonoBehaviour {
         StartCoroutine(PlayFade());
     }
     
+    // FadeIn Coroutine
     IEnumerator FadeIn () {
         GameManager.Debugger("Init Fade in...");
         OnTransitionStart();
@@ -105,6 +108,7 @@ public class Transition : MonoBehaviour {
         PlayFade -= FadeIn;
     }
 
+    // FadeOut Coroutine
     IEnumerator FadeOut () {
         GameManager.Debugger("Init Fade out...");
         OnTransitionStart();
@@ -117,11 +121,13 @@ public class Transition : MonoBehaviour {
         PlayFade -= FadeOut;
     }
 
+    // Fade Coroutine start callback
     void OnTransitionStart () {
         Playing = true;
         GameManager.Debugger("Transition started");
     }
 
+    // Fade Coroutine ended callback
     void OnTransitionEnd () {
         Playing = false;
         GameManager.Debugger("Transition ended");

@@ -81,7 +81,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
             if (FrankController.EndPoint) {
                 FrankController.InitFrank();
             }
-            GUIManager.instance.GetUI("UIMask").display = false;
+            GUIManager.instance.GetUI("UIMask").Display = false;
         }
         catch(System.Exception error) {
             Debug.Log("Object not found, or tracking was just initiliazed. " + error.Message);
@@ -110,7 +110,7 @@ public class CustomTrackableEventHandler : MonoBehaviour,
             if (FrankController.EndPoint) {
                 FrankController.StopFrank();
             }
-            GUIManager.instance.GetUI("UIMask").display = true;
+            GUIManager.instance.GetUI("UIMask").Display = true;
         }
         catch (System.Exception error) {
             Debug.Log("Object not found, or tracking was just initiliazed. " + error.Message);

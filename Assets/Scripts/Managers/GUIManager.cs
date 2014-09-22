@@ -77,11 +77,11 @@ namespace Assets.Scripts.Core {
         }
 
         public void PageRightButtonClick () {
-            ComicManager.instance.OnPageNext();
+            ComicManager.instance.PageNext();
         }
 
         public void PageLeftButtonClick () {
-            ComicManager.instance.OnPagePrevious();
+            ComicManager.instance.PageBack();
         }
 
         public void DebugButtonClick () {

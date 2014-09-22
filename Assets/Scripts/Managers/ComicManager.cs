@@ -1,4 +1,14 @@
-﻿using UnityEngine;
+﻿/* 
+ * Copyright (C) TOYS TALK - All Rights Reserved
+ * Unauthorized copying of this file, via any medium is strictly prohibited
+ * Proprietary and confidential
+ *
+ * Written by Daniel Costa <danielcosta@toystalk.com>, September 2014
+ * 
+ * Class to manage the comic and all of it's elements.
+ */
+
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
@@ -6,39 +16,20 @@ namespace Assets.Scripts.Core{
 
     public class ComicManager : Singleton<ComicManager> {
 
-        const int THUMBMAX = 11; //maximum number of thumbnails for comic pages
-        int viewCenter;
-        List<GameObject> ComicPages;
-        List<ScrollContent> ComicThumbs;
+        const int THUMBMAX = 11; // Maximum number of thumbnails for comic pages
+        int viewCenter; // Center of the scroll view
+        List<GameObject> ComicPages; // List of all Pages
+        List<ScrollContent> ComicThumbs; // List of all Thumbnails
 
-        public int ActivePage { get; set; } //Current page of the comic
-        public int FirstPage { get; set; }
-        public int LastPage { get; set; }
+        public int ActivePage { get; set; } // Current page of the comic
+        public int FirstPage { get; set; } // First page of the comic
+        public int LastPage { get; set; } // Last page of the comic
         
-        public void OnComicStart(){
-            ActivePage = 0;
-            viewCenter = THUMBMAX / 2;
-        }
-
-        public void OnPageLoad () {
-
-            ComicPages = new List<GameObject>();
-            ComicThumbs = new List<ScrollContent>();
-            
-            foreach (Transform child in GUIManager.instance.GetUI("PageRoot").transform) {
-                ComicPages.Add(child.gameObject);
-            }
-            foreach (Transform child in GUIManager.instance.GetUI("ScrollGrid").transform) {
-                ComicThumbs.Add(child.GetComponent<ScrollContent>());
-            }
-            ComicPages[0].SetActive(false); 
-            FirstPage = 0;
-            LastPage = ComicPages.Count - 1;
-        }
+        
 
         public void StartCheck () {
             if (ActivePage > 0) {
-                GUIManager.instance.GetUI("StartScreen").display = false;
+                GUIManager.instance.GetUI("StartScreen").Display = false;
                 ActivePage++;
                 StartPages();
             }
@@ -52,7 +43,28 @@ namespace Assets.Scripts.Core{
             PageActiveAll();
         }
 
-        public void OnPageNext () {
+        public void OnComicStart () {
+            ActivePage = 0;
+            viewCenter = THUMBMAX / 2;
+        }
+
+        public void OnPageLoad () {
+
+            ComicPages = new List<GameObject>();
+            ComicThumbs = new List<ScrollContent>();
+
+            foreach (Transform child in GUIManager.instance.GetUI("PageRoot").transform) {
+                ComicPages.Add(child.gameObject);
+            }
+            foreach (Transform child in GUIManager.instance.GetUI("ScrollGrid").transform) {
+                ComicThumbs.Add(child.GetComponent<ScrollContent>());
+            }
+            ComicPages[0].SetActive(false);
+            FirstPage = 0;
+            LastPage = ComicPages.Count - 1;
+        }
+
+        public void PageNext () {
             if (ActivePage < LastPage) {
                 ComicPages[ActivePage].SetActive(false);
                 ActivePage++;
@@ -62,13 +74,13 @@ namespace Assets.Scripts.Core{
             }
         }
 
-        public void OnPagePrevious () {
+        public void PageBack () {
             if (ActivePage > FirstPage) {
                 ComicPages[ActivePage].SetActive(false);
                 ActivePage--;
                 ComicPages[ActivePage].SetActive(true);
                 SoundCheck();
-                ThumbActivePrevious();
+                ThumbActiveBack();
             }
         }
 
@@ -83,7 +95,7 @@ namespace Assets.Scripts.Core{
             }
         }
 
-        void ThumbActivePrevious () {
+        void ThumbActiveBack () {
             ComicThumbs[ActivePage].PlayResizeForward();
             ComicThumbs[ActivePage + 1].PlayResizeReverse();
 

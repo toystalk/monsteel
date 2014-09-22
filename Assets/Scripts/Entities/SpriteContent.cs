@@ -3,7 +3,7 @@
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
  *
- * Written by Daniel Costa <danielcosta@toystalk.com>, April 2014
+ * Written by Daniel Costa <danielcosta@toystalk.com>, September 2014
  * 
  * Class to manage NGUI's unity sprites attributes and methods
  */

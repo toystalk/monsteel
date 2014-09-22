@@ -3,7 +3,7 @@
  * Unauthorized copying of this file, via any medium is strictly prohibited
  * Proprietary and confidential
  *
- * Written by Daniel Costa <danielcosta@toystalk.com>, April 2014
+ * Written by Daniel Costa <danielcosta@toystalk.com>, September 2014
  * 
  * Class to manage any UI attributes or interaction, to be extended from specific content classes.
  * 
@@ -21,33 +21,36 @@ public class UIContent : MonoBehaviour {
     
     public string myName; // Name of the content
     public GameObject myObj; // Gameobject of the interface content
+
+    public bool display; // Set the content to be shown or hidden
+    public bool draggable; //Set the content to be draggable or not
+
     public float myFadingSpeed; // Fade speed for fading transitions
         
-    [SerializeField]
-    public bool _display; // Set the content to be shown or hidden
-    [SerializeField]
-    public bool _draggable; //Set the content to be draggable or not
-        
-    public bool display {
+    // Activates and deactivates the object through setter    
+    public bool Display {
         get {
-            return _display;
+            return display;
         }
         set {
 			gameObject.SetActive(value);
-            _display = value;
+            display = value;
         }
     }
     
+    // Required method to initialize any content and it's properties
     public virtual void initContent () {
         myName = this.gameObject.name;
         myObj = this.gameObject;            
     }
 
+    // Fade's current panel with given speed
     public void FadePanel (float fadeSpeed) {
         myFadingSpeed = fadeSpeed;
         StartCoroutine(FadePanel());
     }
 
+    // Coroutine to fade panel
     IEnumerator FadePanel () {
         UIPanel tempPanel = GetComponent<UIPanel>();
         while (tempPanel.alpha < 1) {
@@ -56,6 +59,14 @@ public class UIContent : MonoBehaviour {
         }
     }
 
+    // Activate all child content
+    public void ChildActiveAll (bool setActive) {
+        foreach (Transform t in transform) {
+            t.gameObject.SetActive(setActive);
+        }
+    }
+
+    // Handles when button is clicked, calling GUIManager's reflection
     public virtual void OnClick () {
         // Call guimanager to handle button click
         GUIManager.instance.ButtonCallback (myName);
@@ -65,6 +76,7 @@ public class UIContent : MonoBehaviour {
     public virtual void OnDrag (Vector2 dragPos) {
     }
 
+    // Specific components getters
     public virtual UI2DSprite Get2DSprite () {
         return GetComponent<UI2DSprite>();
     }
@@ -109,6 +121,7 @@ public class UIContent : MonoBehaviour {
         return GetComponent<TweenScale>();
     }
 
+    #region UI CALLBACKS
     public void OnEnable () {
         //GameManager.Debugger("Object " + myName + " enabled.");
     }
@@ -116,10 +129,5 @@ public class UIContent : MonoBehaviour {
     public void OnDisable () {
         //GameManager.Debugger("Object " + myName + " disabled.");
     }
-
-    public void ChildActiveAll (bool setActive) {
-        foreach (Transform t in transform) {
-            t.gameObject.SetActive(setActive);
-        }
-    }
+    #endregion
 }

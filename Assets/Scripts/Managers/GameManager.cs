@@ -33,7 +33,7 @@ namespace Assets.Scripts.Core {
         public static void SetState (GameStateHandler myState) {
             GameManager.instance.updateState(myState);
         }
-
+                
         #region STATIC_DEBUG
 
         void initDebug () {
