@@ -1,0 +1,348 @@
+fileFormatVersion: 2
+guid: 6b0bab32f6cd2c244861b9b115e1ca20
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: Estilingue
+    100002: Frank
+    100004: //RootNode
+    100006: FrankFootBone001
+    100008: FrankFootBone001 1
+    100010: FrankHead
+    100012: FrankLCalf
+    100014: FrankLCollarbone
+    100016: FrankLDigit11
+    100018: FrankLDigit12
+    100020: FrankLDigit21
+    100022: FrankLDigit22
+    100024: FrankLDigit23
+    100026: FrankLDigit31
+    100028: FrankLDigit32
+    100030: FrankLDigit33
+    100032: FrankLDigit41
+    100034: FrankLDigit42
+    100036: FrankLDigit43
+    100038: FrankLDigit51
+    100040: FrankLDigit52
+    100042: FrankLDigit53
+    100044: FrankLFoot
+    100046: FrankLForearm
+    100048: FrankLPalm
+    100050: FrankLPlatform
+    100052: FrankLThigh
+    100054: FrankLUpperarm
+    100056: FrankNeck1
+    100058: FrankNeck2
+    100060: FrankPelvis
+    100062: FrankRCalf
+    100064: FrankRCollarbone
+    100066: FrankRDigit11
+    100068: FrankRDigit12
+    100070: FrankRDigit21
+    100072: FrankRDigit22
+    100074: FrankRDigit23
+    100076: FrankRDigit31
+    100078: FrankRDigit32
+    100080: FrankRDigit33
+    100082: FrankRDigit41
+    100084: FrankRDigit42
+    100086: FrankRDigit43
+    100088: FrankRDigit51
+    100090: FrankRDigit52
+    100092: FrankRDigit53
+    100094: FrankRFoot
+    100096: FrankRForearm
+    100098: FrankRibcage
+    100100: FrankRPalm
+    100102: FrankRPlatform
+    100104: FrankRThigh
+    100106: FrankRUpperarm
+    100108: FrankSpine1
+    100110: FrankSpine2
+    100112: FrankSpine3
+    100114: FrankSpine4
+    100116: PULL_1
+    100118: PULL_2
+    100120: PULL_3
+    100122: SLING_BN
+    400000: Estilingue
+    400002: Frank
+    400004: //RootNode
+    400006: FrankFootBone001
+    400008: FrankFootBone001 1
+    400010: FrankHead
+    400012: FrankLCalf
+    400014: FrankLCollarbone
+    400016: FrankLDigit11
+    400018: FrankLDigit12
+    400020: FrankLDigit21
+    400022: FrankLDigit22
+    400024: FrankLDigit23
+    400026: FrankLDigit31
+    400028: FrankLDigit32
+    400030: FrankLDigit33
+    400032: FrankLDigit41
+    400034: FrankLDigit42
+    400036: FrankLDigit43
+    400038: FrankLDigit51
+    400040: FrankLDigit52
+    400042: FrankLDigit53
+    400044: FrankLFoot
+    400046: FrankLForearm
+    400048: FrankLPalm
+    400050: FrankLPlatform
+    400052: FrankLThigh
+    400054: FrankLUpperarm
+    400056: FrankNeck1
+    400058: FrankNeck2
+    400060: FrankPelvis
+    400062: FrankRCalf
+    400064: FrankRCollarbone
+    400066: FrankRDigit11
+    400068: FrankRDigit12
+    400070: FrankRDigit21
+    400072: FrankRDigit22
+    400074: FrankRDigit23
+    400076: FrankRDigit31
+    400078: FrankRDigit32
+    400080: FrankRDigit33
+    400082: FrankRDigit41
+    400084: FrankRDigit42
+    400086: FrankRDigit43
+    400088: FrankRDigit51
+    400090: FrankRDigit52
+    400092: FrankRDigit53
+    400094: FrankRFoot
+    400096: FrankRForearm
+    400098: FrankRibcage
+    400100: FrankRPalm
+    400102: FrankRPlatform
+    400104: FrankRThigh
+    400106: FrankRUpperarm
+    400108: FrankSpine1
+    400110: FrankSpine2
+    400112: FrankSpine3
+    400114: FrankSpine4
+    400116: PULL_1
+    400118: PULL_2
+    400120: PULL_3
+    400122: SLING_BN
+    2300000: PULL_1
+    2300002: PULL_2
+    2300004: PULL_3
+    2300006: SLING_BN
+    3300000: PULL_1
+    3300002: PULL_2
+    3300004: PULL_3
+    3300006: SLING_BN
+    4300000: Estilingue
+    4300002: SLING_BN
+    4300004: PULL_1
+    4300006: PULL_2
+    4300008: PULL_3
+    7400000: idle4
+    9500000: //RootNode
+    13700000: Estilingue
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: idle4
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Estilingue
+        weight: 1
+      - path: Frank
+        weight: 1
+      - path: FrankLPlatform
+        weight: 1
+      - path: FrankPelvis
+        weight: 1
+      - path: FrankPelvis/FrankLThigh
+        weight: 1
+      - path: FrankPelvis/FrankLThigh/FrankLCalf
+        weight: 1
+      - path: FrankPelvis/FrankLThigh/FrankLCalf/FrankLFoot
+        weight: 1
+      - path: FrankPelvis/FrankLThigh/FrankLCalf/FrankLFoot/FrankFootBone001
+        weight: 1
+      - path: FrankPelvis/FrankRThigh
+        weight: 1
+      - path: FrankPelvis/FrankRThigh/FrankRCalf
+        weight: 1
+      - path: FrankPelvis/FrankRThigh/FrankRCalf/FrankRFoot
+        weight: 1
+      - path: FrankPelvis/FrankRThigh/FrankRCalf/FrankRFoot/FrankFootBone001 1
+        weight: 1
+      - path: FrankPelvis/FrankSpine1
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit11
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit11/FrankLDigit12
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit21
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit21/FrankLDigit22
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit21/FrankLDigit22/FrankLDigit23
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit31
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit31/FrankLDigit32
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit31/FrankLDigit32/FrankLDigit33
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit41
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit41/FrankLDigit42
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit41/FrankLDigit42/FrankLDigit43
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit51
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit51/FrankLDigit52
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankLCollarbone/FrankLUpperarm/FrankLForearm/FrankLPalm/FrankLDigit51/FrankLDigit52/FrankLDigit53
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankNeck1
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankNeck1/FrankNeck2
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankNeck1/FrankNeck2/FrankHead
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit11
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit11/FrankRDigit12
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit21
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit21/FrankRDigit22
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit21/FrankRDigit22/FrankRDigit23
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit31
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit31/FrankRDigit32
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit31/FrankRDigit32/FrankRDigit33
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit41
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit41/FrankRDigit42
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit41/FrankRDigit42/FrankRDigit43
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit51
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit51/FrankRDigit52
+        weight: 1
+      - path: FrankPelvis/FrankSpine1/FrankSpine2/FrankSpine3/FrankSpine4/FrankRibcage/FrankRCollarbone/FrankRUpperarm/FrankRForearm/FrankRPalm/FrankRDigit51/FrankRDigit52/FrankRDigit53
+        weight: 1
+      - path: FrankRPlatform
+        weight: 1
+      - path: SLING_BN
+        weight: 1
+      - path: SLING_BN/PULL_1
+        weight: 1
+      - path: SLING_BN/PULL_1/PULL_2
+        weight: 1
+      - path: SLING_BN/PULL_1/PULL_2/PULL_3
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0199999996
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

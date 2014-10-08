@@ -88,8 +88,9 @@ public class PlayerController : MonoBehaviour {
 		yield return new WaitForSeconds(1.0f);
 		CameraDevice.Instance.SetFocusMode(CameraDevice.FocusMode.FOCUS_MODE_CONTINUOUSAUTO);
 	}
-	
-	IEnumerator ShowStartUI() {
+
+    IEnumerator ShowStartUI () {
+        GameObject.Find("Estilingue").renderer.enabled = false;
 		yield return new WaitForSeconds(0.5f);
 	
 		GUIController gui = GetComponent<GUIController>();
@@ -105,7 +106,10 @@ public class PlayerController : MonoBehaviour {
 		
 		gui.DisplayMessage("Go!");
 		yield return new WaitForSeconds(1.5f);
-		
+
+        GetComponent<Animator>().SetTrigger("StartGame");
+        GameObject.Find("Estilingue").renderer.enabled = true;
+
 		gui.HideMessages();
 	}
 	
@@ -353,7 +357,6 @@ public class PlayerController : MonoBehaviour {
 		hitPoints = startingHitPoints;
 		gui.UpdateHitPoints(hitPoints);
 		
-		GetComponent<Animator>().SetTrigger("Restart");
 		
 		enemySpawnRate = 16f;
 		
@@ -429,13 +432,13 @@ public class PlayerController : MonoBehaviour {
 		transform.LookAt(enemyHit.transform.position);
 		
 		// Play shooting animation
-		weapon.transform.FindChild("Bola_Boliche").gameObject.SetActive(true);
+		//weapon.transform.FindChild("Bola_Boliche").gameObject.SetActive(true);
 		GetComponent<Animator>().SetTrigger("Shoot");
-		weapon.GetComponent<Animator>().SetTrigger("Shoot");
+		//weapon.GetComponent<Animator>().SetTrigger("Shoot");
 		
 		yield return new WaitForSeconds(0.75f);
 		
-		weapon.transform.FindChild("Bola_Boliche").gameObject.SetActive(false);
+		//weapon.transform.FindChild("Bola_Boliche").gameObject.SetActive(false);
 		
 		// Play shooting sound
 		AudioManager.instance.playEffect("shot");
@@ -467,7 +470,8 @@ public class PlayerController : MonoBehaviour {
 	
 	public void RetryOnClick() {
 		SetGameState(GameState.PreGame);
-		SetGameState(GameState.Running);
+        SetGameState(GameState.Running);
+        GetComponent<Animator>().SetTrigger("Restart");
 		StartGame();
 	}
 }
